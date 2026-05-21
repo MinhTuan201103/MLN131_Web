@@ -1,64 +1,69 @@
-import { CheckCircle2 } from "lucide-react"
-import { SectionHeader } from "@/components/content-card"
+import { SectionHeader, SectionWrap } from "@/components/content-card"
 
 export function ConclusionSection() {
   return (
-    <section className="py-20 bg-secondary/20">
-      <div className="container mx-auto px-4">
+    <SectionWrap id="conclusion" variant="default">
+      <div className="text-center border-b-4 border-revolutionary-red pb-16 md:pb-section-gap max-w-4xl mx-auto">
         <SectionHeader
-          badge="KẾT LUẬN"
-          title="40 Năm Đổi Mới - Thành Tựu Lịch Sử"
+          align="center"
+          badge="Kết luận"
+          title={
+            <>
+              40 Năm Đổi Mới — <span className="text-revolutionary-red">Tầm Nhìn 2045</span>
+            </>
+          }
         />
 
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/10 via-card to-chart-2/10 rounded-2xl p-8 md:p-12 border border-primary/20 shadow-lg">
-            <div className="flex items-start gap-6">
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-                <CheckCircle2 className="w-8 h-8 text-primary" />
-              </div>
-              <div className="space-y-4">
-                <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                  Có thể khẳng định rằng, sau <strong className="text-primary">40 năm Đổi mới</strong>, 
-                  Việt Nam không chỉ đạt được thành tựu về kinh tế mà còn đạt nhiều thành tựu to lớn 
-                  về văn hóa – xã hội.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Những kết quả đó là minh chứng rõ nét cho <strong>bản chất nhân văn của chủ nghĩa 
-                  xã hội ở Việt Nam</strong> – một mô hình phát triển hướng đến hạnh phúc, chất lượng 
-                  sống và sự phát triển toàn diện của con người.
-                </p>
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-muted-foreground italic">
-                    &quot;Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay.&quot;
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">— Đại hội XIII</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <p className="text-lg text-on-surface-variant leading-relaxed mb-12 max-w-3xl mx-auto">
+          Sau 40 năm Đổi mới, Việt Nam đạt thành tựu có ý nghĩa lịch sử về kinh tế, văn hóa — xã
+          hội, quốc phòng và chính trị — minh chứng bản chất nhân văn của CNXH ở Việt Nam.
+        </p>
 
-          {/* Key takeaways */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-            {[
-              { value: "510", unit: "tỷ USD", label: "GDP 2025" },
-              { value: "Top 32", unit: "", label: "Thế giới" },
-              { value: "0.766", unit: "", label: "Chỉ số HDI" },
-              { value: "193", unit: "", label: "Đối tác quốc tế" },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="text-center p-4 rounded-lg bg-card border border-border"
-              >
-                <div className="text-2xl md:text-3xl font-bold text-primary">
-                  {item.value}
-                  {item.unit && <span className="text-sm font-normal text-muted-foreground ml-1">{item.unit}</span>}
-                </div>
-                <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
-              </div>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-left mb-12">
+          <div className="border-l-4 border-golden-silk pl-8">
+            <span className="font-label-mono text-monument-grey text-lg block mb-3">Giai đoạn 2030</span>
+            <p className="text-on-surface-variant">
+              Nước đang phát triển, công nghiệp hiện đại, thu nhập trung bình cao — GDP ~900 tỷ USD.
+            </p>
+          </div>
+          <div className="border-l-4 border-revolutionary-red pl-8">
+            <span className="font-label-mono text-monument-grey text-lg block mb-3">Giai đoạn 2045</span>
+            <p className="text-on-surface-variant">
+              Nước phát triển, thu nhập cao, theo định hướng xã hội chủ nghĩa — Kỷ nguyên vươn mình.
+            </p>
           </div>
         </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {[
+            { value: "510", unit: "tỷ USD", label: "GDP 2025" },
+            { value: "Top 32", unit: "", label: "Thế giới" },
+            { value: "0.766", unit: "", label: "Chỉ số HDI" },
+            { value: "193", unit: "", label: "Đối tác quốc tế" },
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="p-4 bg-surface-container border border-monument-grey text-center"
+            >
+              <div className="font-display text-2xl md:text-3xl font-black text-on-surface">
+                {item.value}
+                {item.unit && (
+                  <span className="text-sm font-normal text-on-surface-variant ml-1">{item.unit}</span>
+                )}
+              </div>
+              <div className="font-label-mono text-xs text-on-surface-variant mt-1 uppercase tracking-wider">
+                {item.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <blockquote className="text-on-surface italic text-lg mb-8">
+          &quot;Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày
+          nay.&quot;
+          <footer className="text-sm text-on-surface-variant mt-2 not-italic">— Đại hội XIII</footer>
+        </blockquote>
       </div>
-    </section>
+    </SectionWrap>
   )
 }

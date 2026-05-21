@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VIETNAM 40 | Kỷ Nguyên Vươn Mình</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=JetBrains+Mono:wght@500&amp;family=Libre+Franklin:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#111415",
+                        "on-primary-fixed": "#410000",
+                        "tertiary-fixed": "#e2e2e5",
+                        "on-tertiary-container": "#cccdcf",
+                        "surface-container": "#1e2021",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "on-primary-container": "#ffbdb2",
+                        "error-container": "#93000a",
+                        "on-primary": "#690000",
+                        "secondary": "#fff9ef",
+                        "inverse-surface": "#e2e2e4",
+                        "primary-fixed": "#ffdad4",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#725f00",
+                        "on-secondary": "#3a3000",
+                        "monument-grey": "#2C2C2E",
+                        "on-tertiary": "#2f3133",
+                        "background": "#111415",
+                        "secondary-fixed": "#ffe16d",
+                        "surface-tint": "#ffb4a8",
+                        "on-background": "#e2e2e4",
+                        "surface-container-highest": "#333537",
+                        "tertiary": "#c6c6c9",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "tertiary-fixed-dim": "#c6c6c9",
+                        "surface-container-low": "#1a1c1d",
+                        "outline": "#ac8882",
+                        "surface-variant": "#333537",
+                        "surface-dim": "#111415",
+                        "on-primary-fixed-variant": "#930000",
+                        "revolutionary-red": "#B20000",
+                        "on-surface": "#e2e2e4",
+                        "secondary-fixed-dim": "#e9c400",
+                        "surface-container-lowest": "#0c0e10",
+                        "golden-silk": "#FFD700",
+                        "secondary-container": "#ffdb3c",
+                        "inverse-primary": "#bd0f07",
+                        "outline-variant": "#5c403b",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#e6bdb7",
+                        "inverse-on-surface": "#2f3132",
+                        "on-secondary-fixed": "#221b00",
+                        "surface-bright": "#37393b",
+                        "on-error-container": "#ffdad6",
+                        "charcoal-slate": "#121212",
+                        "surface-container-high": "#282a2c",
+                        "primary": "#ffb4a8",
+                        "primary-container": "#b20000",
+                        "on-secondary-fixed-variant": "#544600",
+                        "tertiary-container": "#555759",
+                        "on-tertiary-fixed": "#1a1c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "section-gap": "160px",
+                        "container-max": "1440px",
+                        "sidebar-width": "80px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Libre Franklin"],
+                        "display-hero": ["Montserrat"],
+                        "body-lg": ["Libre Franklin"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "display-hero": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                        "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCbdPVy-upZuuzVI94OL64N1uE60NCoI-qHPzlJPhNEtpok-wERXxaVLsieTDoWFBnTas7irtTOmb_jjKKuG-HMWD-CTylITeRNeNyIFs7l2NJcFSS6CI3OjO_1h5cvHh483cM26GHOhCGBVHSHCa6uvJMgtk4CKWnukxdFd1DKYiukCJ-bXV0s2gnjML7OJ6MQitTEGS7W4MsmnhfM3GyD65ZUSGvszUgfcuAYmJb7C9wezDkqkg_jydi-XYp3axn2S_ptkRk9eAYY);
+    opacity: 0.05;
+    pointer-events: none
+    }
+.text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed
+    }
+.exhibition-rail {
+    width: 80px;
+    border-right: 1px solid #2C2C2E
+    }
+::selection {
+    background-color: #B20000;
+    color: #FFF
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-revolutionary-red">
+<!-- TOP APP BAR -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b-4 border-revolutionary-red dark:border-primary">
+<nav class="flex justify-between items-center h-24 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-black tracking-tighter text-revolutionary-red dark:text-primary">
+                VIETNAM 40
+            </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-golden-silk dark:text-secondary-fixed font-bold border-b-2 border-golden-silk pb-1 transition-all duration-300" href="#">Chronicle</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-mono uppercase tracking-widest hover:text-golden-silk dark:hover:text-secondary-fixed transition-all duration-300" href="#">Economy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-mono uppercase tracking-widest hover:text-golden-silk dark:hover:text-secondary-fixed transition-all duration-300" href="#">Society</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-mono uppercase tracking-widest hover:text-golden-silk dark:hover:text-secondary-fixed transition-all duration-300" href="#">Vision</a>
+</div>
+<button class="bg-revolutionary-red text-white px-8 py-3 font-label-mono uppercase tracking-widest hover:bg-golden-silk hover:text-black transition-all duration-300 scale-95 active:opacity-80">
+                Exhibition Tour
+            </button>
+</nav>
+</header>
+<main>
+<!-- HERO SECTION -->
+<section class="relative h-screen flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="National Assembly Building" class="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida/ADBb0uh6JTtdOjcRROjBxmI_vRDL9Z0PX0u03XMicZLYlWn2kGGf9kl4TaoExsVv9i17PIpz2deE5fAMLm5QSe2GQCCfnbPXPIYRyp0GZkO0XJmbue0nHAvEr5w341Y2wJN36ARjZQhlaoXEGH0zgk9ne5s2_xUgu3nMjVIP6ylFL27saAkc90egsRA1yehGR0oK0w1IhamAMXtkSPCt1xCXTpSC87AXUH5f5itpXrISzPVnX3CllnxKWcmgQNo6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="grain-overlay absolute inset-0"></div>
+</div>
+<div class="relative z-10 w-full px-gutter max-w-container-max mx-auto pb-24">
+<div class="flex flex-col md:flex-row items-baseline gap-4 mb-8">
+<span class="font-label-mono text-label-mono text-golden-silk uppercase tracking-[0.3em]">Special Exhibition: 1986 — 2026</span>
+<div class="h-[2px] flex-grow bg-monument-grey"></div>
+</div>
+<h1 class="font-display-hero text-display-hero text-white mb-6 animate-fade-in uppercase">
+                    Kỷ Nguyên<br/>
+<span class="text-revolutionary-red">Vươn Mình</span>
+</h1>
+<p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant">
+                    Bốn thập kỷ đổi mới kiến tạo một Việt Nam hiện đại, tự chủ và hội nhập. Từ một nền kinh tế lạc hậu đến vị thế trung tâm sản xuất toàn cầu.
+                </p>
+</div>
+<!-- Vertical Rail Indicator -->
+<div class="hidden md:flex fixed left-0 top-0 bottom-0 exhibition-rail items-center justify-center z-40 bg-surface/20">
+<span class="text-vertical font-label-mono text-label-mono text-monument-grey uppercase tracking-widest">Digital Archives . Vol 40</span>
+</div>
+</section>
+<!-- STATS SECTION -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 items-start">
+<div class="space-y-8 group">
+<div class="flex items-start gap-4">
+<div class="w-2 h-24 bg-revolutionary-red transition-all duration-500 group-hover:h-32"></div>
+<div>
+<div class="font-display-hero text-[80px] leading-none font-black text-white">774.7%</div>
+<p class="font-label-mono text-label-mono text-revolutionary-red uppercase tracking-widest mt-2">Inflation peak (1986)</p>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant">Sự khởi đầu đầy gian khó từ cuộc khủng hoảng kinh tế-xã hội trầm trọng, buộc đất nước phải bước vào kỷ nguyên Đổi Mới.</p>
+</div>
+<div class="space-y-8 group">
+<div class="flex items-start gap-4">
+<div class="w-2 h-24 bg-golden-silk transition-all duration-500 group-hover:h-32"></div>
+<div>
+<div class="font-display-hero text-[80px] leading-none font-black text-white">$510B</div>
+<p class="font-label-mono text-label-mono text-golden-silk uppercase tracking-widest mt-2">Current GDP (Est.)</p>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant">Tăng trưởng ngoạn mục đưa Việt Nam vào top 40 nền kinh tế lớn nhất thế giới, khẳng định sự đúng đắn của tiến trình mở cửa.</p>
+</div>
+<div class="space-y-8 group">
+<div class="flex items-start gap-4">
+<div class="w-2 h-24 bg-monument-grey transition-all duration-500 group-hover:h-32"></div>
+<div>
+<div class="font-display-hero text-[80px] leading-none font-black text-white">#01</div>
+<p class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest mt-2">Strategic Priority</p>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant">Phát triển lấy con người làm trung tâm, đảm bảo mọi thành quả của sự phát triển đều thuộc về nhân dân.</p>
+</div>
+</div>
+</section>
+<!-- PHOTO GALLERY GRID: ECONOMY -->
+<section class="bg-surface-container-low py-section-gap border-t-8 border-monument-grey">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-20">
+<h2 class="font-headline-lg text-headline-lg text-white max-w-xl">Economic <span class="text-revolutionary-red">Breakthroughs</span></h2>
+<span class="font-label-mono text-label-mono text-monument-grey uppercase pb-4">Gallery Grid 01 // Integration</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[900px]">
+<!-- Large Feature: Seaport -->
+<div class="md:col-span-8 group relative overflow-hidden bg-monument-grey border border-monument-grey">
+<img alt="Modern Seaport Logistics" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida/ADBb0ujg4gk0c4yIv5crlENmAC85RioPXg6jP2XQCPtI8OaZ0GMX9PY9DXt9Y4Y6oGn-ZqN9JOIAHnSvT_G7mNfLTIsosYRg7gDNIB2KX5zlfabFCRgxPxllIO2XtzoYIPPrlelOvQW0Yp1v5tXV1v-7YGTlq9MxtKixTUhkG522lmrHCRsfNEb5Zs6ffZ-uuo9BYs_P4EwpQMOhVtA7yGqwqr8EREMW-tJjA5Er16NcZM3YV9sa105HQGYUg5Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-12">
+<h3 class="font-headline-md text-headline-md text-white mb-4">The Global Gateway</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Vietnam has become a critical hub in the global supply chain, with deep-water ports connecting to every continent.</p>
+</div>
+</div>
+<!-- Vertical Stack -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="flex-1 group relative overflow-hidden border border-monument-grey">
+<img alt="High-Tech Medical Innovation" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida/ADBb0uhi4qmz1UFgLDCv47ccnnkQ-dDPtkXsoVLBn9W5RCUSoXB5BCbc5R4mldLLmFyURAS2Pjc4nE9rlEYvel8Rh7Gf-z_pZOkS9_6h6wWVAhNbdOL4nBqt_LOqKW8Jl8rXW7R2YZgfLMPU1fE_nZxCCp5HrZUQFVB4o6ZfooWuM7hlXe-scTYjRUO11PMs1B5b7CsCljeQD_tKNegInQbVuB33hv0oK8mWL86_fjxSq39pyxv-xVrsXQ8JuSHO"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="bg-golden-silk text-black font-label-mono text-[12px] px-3 py-1 uppercase font-bold">Innovation</span>
+</div>
+</div>
+<div class="flex-1 bg-revolutionary-red p-12 flex flex-col justify-center">
+<span class="material-symbols-outlined text-white text-6xl mb-6" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<h4 class="font-headline-md text-headline-md text-white">100+ Trade Partners</h4>
+<p class="font-body-md text-white/80 mt-4">Một mạng lưới thương mại toàn cầu giúp thúc đẩy sản lượng xuất khẩu tăng gấp hàng trăm lần.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOCIALISM CHARACTERISTICS: BENTO STYLE -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto">
+<div class="mb-20 text-center">
+<span class="font-label-mono text-label-mono text-revolutionary-red uppercase tracking-[0.4em] mb-4 block">Theoretical Foundation</span>
+<h2 class="font-headline-lg text-headline-lg text-white">8 Characteristics of Socialism</h2>
+<div class="w-40 h-2 bg-golden-silk mx-auto mt-8"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container p-10 border border-monument-grey hover:border-revolutionary-red transition-all duration-300">
+<span class="font-label-mono text-revolutionary-red text-2xl mb-4 block">01.</span>
+<h5 class="font-headline-md text-[24px] leading-tight text-white mb-4">Prosperous People</h5>
+<p class="font-body-md text-on-surface-variant">Dân giàu, nước mạnh, công bằng, dân chủ, văn minh.</p>
+</div>
+<div class="bg-surface-container-high p-10 border border-monument-grey md:col-span-2 flex items-center justify-between group">
+<div>
+<span class="font-label-mono text-revolutionary-red text-2xl mb-4 block">02.</span>
+<h5 class="font-headline-md text-[24px] leading-tight text-white">Socialist Economy</h5>
+</div>
+<span class="material-symbols-outlined text-monument-grey text-8xl group-hover:text-golden-silk transition-colors">factory</span>
+</div>
+<div class="bg-surface-container p-10 border border-monument-grey hover:border-revolutionary-red transition-all duration-300">
+<span class="font-label-mono text-revolutionary-red text-2xl mb-4 block">03.</span>
+<h5 class="font-headline-md text-[24px] leading-tight text-white mb-4">National Unity</h5>
+<p class="font-body-md text-on-surface-variant">Đoàn kết toàn dân tộc là sức mạnh cốt lõi.</p>
+</div>
+<div class="bg-revolutionary-red p-10 md:col-span-2 group">
+<span class="font-label-mono text-white/60 text-2xl mb-4 block">04.</span>
+<h5 class="font-headline-md text-white mb-4">The Party Leadership</h5>
+<p class="font-body-md text-white/90">Sự lãnh đạo của Đảng Cộng sản Việt Nam là nhân tố quyết định mọi thắng lợi.</p>
+</div>
+<div class="bg-surface-container-highest p-10 border border-monument-grey md:col-span-2">
+<span class="font-label-mono text-golden-silk text-2xl mb-4 block">Vision 2045</span>
+<h5 class="font-headline-md text-white">Trở thành nước phát triển, thu nhập cao vào giữa thế kỷ 21.</h5>
+</div>
+</div>
+</section>
+<!-- HUMAN-CENTRIC ACHIEVEMENT -->
+<section class="relative py-section-gap overflow-hidden bg-monument-grey">
+<div class="px-gutter max-w-container-max mx-auto flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<img alt="Human-Centric Care" class="w-full grayscale border-l-8 border-golden-silk shadow-2xl" data-alt="A high-tech operating theater in a modern Vietnamese hospital. Surgeons in blue scrubs are working with robotic surgical arms. Large monitors display biological scans. The setting is clean, sterile, and prestigious, utilizing dark gray and revolutionary red accents. High-contrast lighting highlights the medical equipment's precision." src="https://lh3.googleusercontent.com/aida/ADBb0uhi4qmz1UFgLDCv47ccnnkQ-dDPtkXsoVLBn9W5RCUSoXB5BCbc5R4mldLLmFyURAS2Pjc4nE9rlEYvel8Rh7Gf-z_pZOkS9_6h6wWVAhNbdOL4nBqt_LOqKW8Jl8rXW7R2YZgfLMPU1fE_nZxCCp5HrZUQFVB4o6ZfooWuM7hlXe-scTYjRUO11PMs1B5b7CsCljeQD_tKNegInQbVuB33hv0oK8mWL86_fjxSq39pyxv-xVrsXQ8JuSHO"/>
+<div class="absolute -top-10 -right-10 bg-revolutionary-red p-8 hidden lg:block">
+<span class="font-display-hero text-[60px] text-white leading-none">93%</span>
+<p class="font-label-mono text-white/80 uppercase">Health Coverage</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-mono text-golden-silk uppercase tracking-widest mb-6 block">Our Core Value</span>
+<h2 class="font-headline-lg text-headline-lg text-white mb-8">Social <span class="text-golden-silk">Progress</span></h2>
+<div class="space-y-6">
+<p class="font-body-lg text-on-surface">“Sự phát triển lấy con người làm trung tâm, không để ai bị bỏ lại phía sau.”</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface-variant font-body-md">
+<span class="w-8 h-[2px] bg-revolutionary-red"></span>
+                                Xóa đói giảm nghèo bền vững là ưu tiên hàng đầu.
+                            </li>
+<li class="flex items-center gap-4 text-on-surface-variant font-body-md">
+<span class="w-8 h-[2px] bg-revolutionary-red"></span>
+                                Giáo dục và Y tế là nền tảng quốc gia.
+                            </li>
+<li class="flex items-center gap-4 text-on-surface-variant font-body-md">
+<span class="w-8 h-[2px] bg-revolutionary-red"></span>
+                                Công bằng xã hội được bảo đảm qua từng chính sách.
+                            </li>
+</ul>
+<button class="border-2 border-white text-white px-10 py-4 font-label-mono uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 mt-8">
+                            View Social Metrics
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / VISION 2045 -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto text-center border-b-4 border-revolutionary-red">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-white mb-12">Building the <span class="text-revolutionary-red">Future Economy</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left mb-16">
+<div class="border-l-4 border-golden-silk pl-8">
+<span class="font-label-mono text-monument-grey text-xl block mb-4">Phase One: 2030</span>
+<p class="font-body-md text-on-surface-variant">Nước đang phát triển có công nghiệp hiện đại, thu nhập trung bình cao.</p>
+</div>
+<div class="border-l-4 border-revolutionary-red pl-8">
+<span class="font-label-mono text-monument-grey text-xl block mb-4">Phase Two: 2045</span>
+<p class="font-body-md text-on-surface-variant">Trở thành nước phát triển, thu nhập cao, theo định hướng xã hội chủ nghĩa.</p>
+</div>
+</div>
+<div class="relative group inline-block">
+<div class="absolute -inset-1 bg-gradient-to-r from-revolutionary-red to-golden-silk rounded-none blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+<button class="relative bg-surface text-white px-16 py-6 font-label-mono uppercase tracking-[0.2em] text-xl border border-monument-grey hover:bg-revolutionary-red transition-all">
+                        Explore the 2045 Roadmap
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full py-20 px-gutter bg-surface-container-lowest border-t-8 border-monument-grey">
+<div class="grid grid-cols-1 md:grid-cols-2 items-end gap-12 max-w-container-max mx-auto">
+<div class="space-y-8">
+<div class="font-headline-md text-headline-md font-black text-on-surface dark:text-on-surface">
+                    VIETNAM 40
+                </div>
+<p class="font-body-md text-on-surface-variant max-w-sm">
+                    Triển lãm kỹ thuật số tôn vinh 40 năm đổi mới và những thành tựu vĩ đại của dân tộc Việt Nam.
+                </p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-label-mono hover:text-primary transition-colors" href="#">Archives</a>
+<a class="text-on-surface-variant font-label-mono hover:text-primary transition-colors" href="#">Methodology</a>
+<a class="text-on-surface-variant font-label-mono hover:text-primary transition-colors" href="#">Legal</a>
+<a class="text-on-surface-variant font-label-mono hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="text-right">
+<div class="mb-8 flex justify-end gap-4">
+<div class="w-12 h-12 rounded-full border border-monument-grey flex items-center justify-center hover:bg-revolutionary-red transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-white">share</span>
+</div>
+<div class="w-12 h-12 rounded-full border border-monument-grey flex items-center justify-center hover:bg-revolutionary-red transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-white">download</span>
+</div>
+</div>
+<p class="font-label-mono text-on-surface-variant uppercase tracking-widest text-[12px]">
+                    © 2024 National Archives of Renovation. A Visionary Digital Exhibition.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and atmospheric effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Add basic scroll reveal
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>

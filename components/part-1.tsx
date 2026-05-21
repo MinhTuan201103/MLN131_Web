@@ -3,179 +3,105 @@ import {
   SectionHeader,
   ListItem,
   SourceLink,
+  SectionWrap,
 } from "@/components/content-card"
-import { BookOpen, Target, Globe, Lightbulb, CheckCircle2 } from "lucide-react"
+import { Factory } from "lucide-react"
+
+const traitsRest = [
+  { n: "05.", title: "Con người hạnh phúc", desc: "Ấm no, tự do, hạnh phúc." },
+  { n: "06.", title: "Đoàn kết dân tộc", desc: "Bình đẳng, tôn trọng lẫn nhau." },
+  { n: "07.", title: "Nhà nước pháp quyền XHCN", desc: "Của dân, do dân, vì dân." },
+  { n: "08.", title: "Hữu nghị quốc tế", desc: "Hợp tác quốc tế." },
+]
 
 export function Part1CoSoLyLuan() {
   return (
-    <section id="part-1" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <SectionHeader
-          badge="PHẦN 1 · CƠ SỞ LÝ LUẬN"
-          title="Chúng Ta Đang Xây Dựng Cái Gì?"
-          description="Theo C.Mác và Cương lĩnh của Đảng, CNXH là giai đoạn đầu của hình thái kinh tế - xã hội cộng sản chủ nghĩa, với mục tiêu giải phóng con người và phát triển toàn diện."
-        />
+    <SectionWrap id="part-1">
+      <SectionHeader
+        badge="Phần 1 · Cơ sở lý luận"
+        title={
+          <>
+            Nền Tảng <span className="text-revolutionary-red">Lý Luận</span>
+          </>
+        }
+        description="Kiên định CM-Lênin và tư tưởng Hồ Chí Minh — kim chỉ nam cho công cuộc xây dựng CNXH tại Việt Nam."
+      />
 
-        <div className="grid gap-6 md:grid-cols-2 mb-8">
-          {/* Khái niệm CNXH */}
-          <ContentCard
-            variant="teal"
-            badge="KHÁI NIỆM"
-            title="Chủ Nghĩa Xã Hội"
-            description="Định nghĩa từ giáo trình CNXH Khoa học"
-          >
-            <p className="mb-4">
-              Chủ nghĩa xã hội là một <strong>chế độ xã hội mới</strong>, giai đoạn đầu 
-              của hình thái kinh tế - xã hội cộng sản chủ nghĩa, với mục tiêu:
-            </p>
-            <ul className="space-y-2 mb-4">
-              <ListItem>Giải phóng con người</ListItem>
-              <ListItem>Phát triển lực lượng sản xuất</ListItem>
-              <ListItem>Thực hiện công bằng, dân chủ và tiến bộ xã hội</ListItem>
-            </ul>
-            <p className="text-sm italic text-muted-foreground">
-              Với Việt Nam, CNXH không chỉ là mục tiêu kinh tế, mà là mô hình phát triển 
-              tổng hợp: kinh tế, chính trị, văn hóa, xã hội, con người, dân tộc, nhà nước 
-              và quan hệ quốc tế.
-            </p>
-          </ContentCard>
-
-          {/* 8 đặc trưng */}
-          <ContentCard
-            variant="yellow"
-            badge="CƯƠNG LĨNH 2011"
-            title="8 Đặc Trưng của Xã Hội XHCN"
-            description="Theo Cương lĩnh bổ sung, phát triển năm 2011"
-          >
-            <ol className="space-y-3 text-sm">
-              <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-chart-2/20 text-chart-2 flex items-center justify-center text-xs font-bold">1</span>
-                <span>Dân giàu, nước mạnh, dân chủ, công bằng, văn minh</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-chart-2/20 text-chart-2 flex items-center justify-center text-xs font-bold">2</span>
-                <span>Nhân dân làm chủ</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-chart-2/20 text-chart-2 flex items-center justify-center text-xs font-bold">3</span>
-                <span>Kinh tế phát triển cao, dựa trên LLSX hiện đại và QHSX tiến bộ</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-chart-2/20 text-chart-2 flex items-center justify-center text-xs font-bold">4</span>
-                <span>Văn hóa tiên tiến, đậm đà bản sắc dân tộc</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-chart-2/20 text-chart-2 flex items-center justify-center text-xs font-bold">5</span>
-                <span>Con người có cuộc sống ấm no, tự do, hạnh phúc</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-chart-2/20 text-chart-2 flex items-center justify-center text-xs font-bold">6</span>
-                <span>Các dân tộc bình đẳng, đoàn kết, tôn trọng lẫn nhau</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-chart-2/20 text-chart-2 flex items-center justify-center text-xs font-bold">7</span>
-                <span>Có Nhà nước pháp quyền XHCN của dân, do dân, vì dân</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-chart-2/20 text-chart-2 flex items-center justify-center text-xs font-bold">8</span>
-                <span>Có quan hệ hữu nghị, hợp tác với các nước trên thế giới</span>
-              </li>
-            </ol>
-            <div className="mt-4 pt-4 border-t border-border">
-              <SourceLink href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/gioi-thieu-van-kien-dang/ve-cac-dac-trung-cua-chu-nghia-xa-hoi-qua-cuong-linh-1991-va-cuong-linh-2011-cua-dang-cong-san-viet-nam-865">
-                Nguồn: Cổng Tư liệu - Văn kiện Đảng
-              </SourceLink>
-            </div>
-          </ContentCard>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3 mb-8">
-          {/* Thời kỳ quá độ */}
-          <ContentCard
-            variant="purple"
-            badge="THỜI KỲ QUÁ ĐỘ"
-            title="Quá Độ Lên CNXH"
-          >
-            <p className="text-sm mb-3">
-              Thời kỳ quá độ là giai đoạn chuyển biến lâu dài từ xã hội cũ sang xã hội XHCN.
-            </p>
-            <p className="text-sm mb-3">
-              <strong>Vì sao Việt Nam cần quá độ lâu dài?</strong>
-            </p>
-            <ul className="space-y-1 text-sm">
-              <ListItem>Xuất phát điểm thấp: nước nông nghiệp lạc hậu</ListItem>
-              <ListItem>Hậu quả chiến tranh nặng nề</ListItem>
-              <ListItem>Lực lượng sản xuất thấp</ListItem>
-              <ListItem>Cơ sở vật chất - kỹ thuật của CNXH chưa có sẵn</ListItem>
-            </ul>
-          </ContentCard>
-
-          {/* Bỏ qua TBCN */}
-          <ContentCard
-            variant="red"
-            badge="LÝ LUẬN"
-            title={'"Bỏ Qua" Chế Độ TBCN'}
-          >
-            <p className="text-sm mb-3">
-              <strong>Không có nghĩa là</strong> phủ nhận sạch trơn mọi thành tựu của chủ nghĩa tư bản.
-            </p>
-            <p className="text-sm mb-3">
-              <strong>Nội dung đúng:</strong>
-            </p>
-            <ul className="space-y-1 text-sm">
-              <ListItem>Không thiết lập sự thống trị của QHSX TBCN và nhà nước tư sản</ListItem>
-              <ListItem>Tiếp thu thành tựu văn minh nhân loại</ListItem>
-              <ListItem>Học hỏi KH-CN, kinh nghiệm quản lý</ListItem>
-              <ListItem>Vận dụng kinh tế thị trường để phát triển LLSX</ListItem>
-            </ul>
-          </ContentCard>
-
-          {/* Mô hình Việt Nam */}
-          <ContentCard
-            variant="teal"
-            badge="MÔ HÌNH"
-            title="Mô Hình Việt Nam"
-          >
-            <ul className="space-y-2 text-sm">
-              <ListItem>
-                <strong>Kinh tế thị trường định hướng XHCN</strong> - Nền kinh tế hiện đại, hội nhập quốc tế
-              </ListItem>
-              <ListItem>
-                <strong>Nhà nước pháp quyền XHCN</strong> - Do Đảng lãnh đạo
-              </ListItem>
-              <ListItem>
-                <strong>Nhân dân làm chủ</strong> - Dân biết, dân bàn, dân làm, dân kiểm tra
-              </ListItem>
-              <ListItem>
-                <strong>Hội nhập quốc tế</strong> - Giữ vững độc lập, tự chủ
-              </ListItem>
-            </ul>
-            <div className="mt-4 pt-4 border-t border-border">
-              <SourceLink href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/gioi-thieu-van-kien-dang/cac-van-kien-dai-hoi-xiii-cua-dang-da-tiep-thu-co-chon-loc-nhung-gia-tri-chung-cua-nhan-loai-3769">
-                Nguồn: Văn kiện Đại hội XIII
-              </SourceLink>
-            </div>
-          </ContentCard>
-        </div>
-
-        {/* Kết luận */}
-        <div className="bg-gradient-to-r from-primary/10 via-card to-primary/10 rounded-xl p-6 md:p-8 border border-primary/20">
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-              <CheckCircle2 className="w-6 h-6 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Chốt Phần 1</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Vì vậy, khi nói &quot;thành tựu sau 40 năm đổi mới&quot;, không chỉ là tăng GDP hay xuất khẩu, 
-                mà là đánh giá quá trình <strong>xây dựng mô hình CNXH Việt Nam</strong>: phát triển kinh tế 
-                đi cùng ổn định chính trị, tiến bộ xã hội, nâng cao đời sống nhân dân, mở rộng dân chủ, 
-                bảo vệ môi trường và hội nhập quốc tế.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="mb-12 md:mb-20 text-center">
+        <span className="font-label-mono text-revolutionary-red uppercase tracking-[0.4em] mb-4 block text-sm">
+          Cương lĩnh 2011
+        </span>
+        <h3 className="font-display text-2xl md:text-4xl font-extrabold text-on-surface">
+          8 Đặc Trưng của Xã Hội XHCN
+        </h3>
+        <div className="w-40 h-0.5 bg-golden-silk mx-auto mt-6" />
       </div>
-    </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+        <ContentCard number="01." title="Dân giàu, nước mạnh" description="Dân chủ, công bằng, văn minh.">
+          <p className="text-sm">Mục tiêu tổng quát của xã hội XHCN ở Việt Nam.</p>
+        </ContentCard>
+        <ContentCard variant="wide" number="02." title="Kinh tế XHCN" className="md:col-span-2">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 w-full">
+            <p className="text-sm md:max-w-md">
+              Phát triển cao, dựa trên lực lượng sản xuất hiện đại và quan hệ sản xuất tiến bộ.
+            </p>
+            <Factory className="hidden md:block w-20 h-20 text-monument-grey opacity-40 shrink-0" />
+          </div>
+        </ContentCard>
+        <ContentCard number="03." title="Đoàn kết dân tộc" description="Sức mạnh cốt lõi.">
+          <p className="text-sm">Các dân tộc bình đẳng, đoàn kết, tôn trọng lẫn nhau.</p>
+        </ContentCard>
+        <ContentCard variant="red" number="04." title="Lãnh đạo của Đảng" className="md:col-span-2">
+          <p className="text-sm">
+            Sự lãnh đạo của Đảng CSVN là nhân tố quyết định mọi thắng lợi của công cuộc đổi mới.
+          </p>
+        </ContentCard>
+        <ContentCard variant="gold" number="Vision 2045" title="Nước phát triển, thu nhập cao" className="md:col-span-2">
+          <p className="text-sm">Giữa thế kỷ 21 — hoàn thiện CSVC của CNXH.</p>
+        </ContentCard>
+        {traitsRest.map((t) => (
+          <ContentCard key={t.n} number={t.n} title={t.title} description={t.desc} />
+        ))}
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-3 mb-12">
+        <ContentCard badge="Khái niệm" title="Chủ nghĩa Xã hội">
+          <p className="text-sm mb-3">
+            Chế độ xã hội mới — giai đoạn đầu của hình thái KT-XH cộng sản chủ nghĩa:
+          </p>
+          <ul>
+            <ListItem>Giải phóng con người</ListItem>
+            <ListItem>Phát triển lực lượng sản xuất</ListItem>
+            <ListItem>Công bằng, dân chủ, tiến bộ xã hội</ListItem>
+          </ul>
+        </ContentCard>
+        <ContentCard variant="red" badge="Lý luận" title='"Bỏ qua" chế độ TBCN'>
+          <ul className="text-sm">
+            <ListItem>Không thiết lập thống trị QHSX TBCN</ListItem>
+            <ListItem>Tiếp thu thành tựu văn minh nhân loại</ListItem>
+            <ListItem>Kinh tế thị trường phát triển LLSX</ListItem>
+          </ul>
+        </ContentCard>
+        <ContentCard badge="Mô hình VN" title="Kinh tế thị trường định hướng XHCN">
+          <ul className="text-sm">
+            <ListItem>Nhà nước pháp quyền XHCN</ListItem>
+            <ListItem>Nhân dân làm chủ</ListItem>
+            <ListItem>Hội nhập giữ độc lập, tự chủ</ListItem>
+          </ul>
+          <div className="mt-4 pt-4 border-t border-monument-grey">
+            <SourceLink href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/gioi-thieu-van-kien-dang/ve-cac-dac-trung-cua-chu-nghia-xa-hoi-qua-cuong-linh-1991-va-cuong-linh-2011-cua-dang-cong-san-viet-nam-865">
+              Cổng Tư liệu — Văn kiện Đảng
+            </SourceLink>
+          </div>
+        </ContentCard>
+      </div>
+
+      <p className="text-on-surface-variant border-l-4 border-golden-silk pl-6 text-lg leading-relaxed max-w-4xl">
+        Thành tựu sau 40 năm đổi mới là đánh giá quá trình{" "}
+        <strong className="text-on-surface">xây dựng mô hình CNXH Việt Nam</strong> — kinh tế đi cùng
+        ổn định chính trị, tiến bộ xã hội và hội nhập quốc tế.
+      </p>
+    </SectionWrap>
   )
 }

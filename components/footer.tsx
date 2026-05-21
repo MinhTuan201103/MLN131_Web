@@ -1,44 +1,58 @@
-import { Star } from "lucide-react"
+import { Share2, Download } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="py-12 bg-background border-t border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center text-center">
-          <div className="flex items-center gap-2 mb-4">
-            <Star className="w-5 h-5 text-primary" />
-            <span className="text-sm font-medium text-foreground">
-              Sản phẩm sáng tạo học tập
-            </span>
+    <footer className="w-full py-16 md:py-20 bg-surface-container-lowest border-t-8 border-monument-grey">
+      <div className="exhibition-container grid grid-cols-1 md:grid-cols-2 items-end gap-12">
+        <div className="space-y-6">
+          <div className="font-display text-2xl md:text-[32px] font-black text-on-surface tracking-tight">
+            VIETNAM 40
           </div>
-          <h3 className="text-lg font-bold text-foreground mb-2">
-            Chủ Nghĩa Xã Hội Khoa Học
-          </h3>
-          <p className="text-sm text-muted-foreground mb-6 max-w-md">
-            Thuyết trình: Thành tựu xây dựng CNXH sau 40 năm Đổi mới tại Việt Nam
+          <p className="text-on-surface-variant max-w-sm leading-relaxed">
+            Sản phẩm sáng tạo học tập — Triển lãm kỹ thuật số tôn vinh 40 năm đổi mới và thành tựu
+            xây dựng CNXH tại Việt Nam.
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <div className="flex flex-wrap gap-6">
             {[
-              { href: "#part-1", label: "Cơ sở lý luận" },
-              { href: "#part-ii", label: "Bối cảnh" },
-              { href: "#part-iii", label: "Kinh tế" },
-              { href: "#part-iv", label: "Văn hóa - Xã hội" },
-              { href: "#part-v", label: "Quốc phòng - Chính trị" },
+              { href: "#part-1", label: "Lý luận" },
+              { href: "#part-2", label: "Bối cảnh" },
+              { href: "#part-3", label: "Kinh tế" },
+              { href: "#part-4", label: "Xã hội" },
+              { href: "#part-5", label: "Chính trị" },
             ].map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-xs text-muted-foreground hover:text-primary transition-colors"
+                className="font-label-mono text-sm text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider"
               >
                 {link.label}
               </a>
             ))}
           </div>
-
-          <div className="text-xs text-muted-foreground">
-            <p>Nguồn tham khảo: Văn kiện Đại hội XIII, Cổng Tư liệu - Văn kiện Đảng, World Bank, Bộ Công Thương</p>
+        </div>
+        <div className="md:text-right">
+          <div className="mb-6 flex md:justify-end gap-4">
+            <button
+              type="button"
+              aria-label="Chia sẻ"
+              className="w-12 h-12 rounded-full border border-monument-grey flex items-center justify-center hover:bg-revolutionary-red transition-colors text-on-surface"
+            >
+              <Share2 className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              aria-label="Tải xuống"
+              className="w-12 h-12 rounded-full border border-monument-grey flex items-center justify-center hover:bg-revolutionary-red transition-colors text-on-surface"
+            >
+              <Download className="w-5 h-5" />
+            </button>
           </div>
+          <p className="font-label-mono text-on-surface-variant uppercase tracking-widest text-xs">
+            Nguồn: Văn kiện ĐH XIII · Cổng Tư liệu Đảng · World Bank
+          </p>
+          <p className="font-label-mono text-on-surface-variant uppercase tracking-widest text-xs mt-2">
+            © 2026 · Chủ nghĩa Xã hội Khoa học · MLN131
+          </p>
         </div>
       </div>
     </footer>

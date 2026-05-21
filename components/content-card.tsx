@@ -5,25 +5,22 @@ interface ContentCardProps {
   title: string
   description?: string
   children: ReactNode
-  variant?: "default" | "teal" | "yellow" | "red" | "purple"
+  variant?: "default" | "surface" | "high" | "red" | "gold" | "wide"
   badge?: string
+  number?: string
   className?: string
 }
 
 const variantStyles = {
-  default: "border-border",
-  teal: "border-l-4 border-l-primary border-t-0 border-r-0 border-b-0",
-  yellow: "border-l-4 border-l-chart-2 border-t-0 border-r-0 border-b-0",
-  red: "border-l-4 border-l-destructive border-t-0 border-r-0 border-b-0",
-  purple: "border-l-4 border-l-chart-4 border-t-0 border-r-0 border-b-0",
-}
-
-const badgeStyles = {
-  default: "bg-secondary text-muted-foreground",
-  teal: "bg-primary/20 text-primary",
-  yellow: "bg-chart-2/20 text-chart-2",
-  red: "bg-destructive/20 text-destructive",
-  purple: "bg-chart-4/20 text-chart-4",
+  default:
+    "bg-surface-container p-8 md:p-10 border border-monument-grey hover:border-revolutionary-red transition-all duration-300",
+  surface:
+    "bg-surface-container p-8 md:p-10 border border-monument-grey hover:border-revolutionary-red transition-all duration-300",
+  high: "bg-surface-container-high p-8 md:p-10 border border-monument-grey",
+  red: "bg-revolutionary-red p-8 md:p-10 text-white",
+  gold: "bg-surface-container-highest p-8 md:p-10 border border-monument-grey",
+  wide:
+    "bg-surface-container-high p-8 md:p-10 border border-monument-grey md:col-span-2 flex flex-col md:flex-row md:items-center md:justify-between gap-6",
 }
 
 export function ContentCard({
@@ -32,41 +29,58 @@ export function ContentCard({
   children,
   variant = "default",
   badge,
+  number,
   className,
 }: ContentCardProps) {
+  const isRed = variant === "red"
+
   return (
-    <div
-      className={cn(
-        "bg-card rounded-lg border p-6 md:p-8",
-        variantStyles[variant],
-        className
-      )}
-    >
-      {badge && (
+    <div className={cn(variantStyles[variant], className)}>
+      {number && (
         <span
           className={cn(
-            "inline-block px-3 py-1 rounded-full text-xs font-medium mb-4",
-            badgeStyles[variant]
+            "font-label-mono text-2xl mb-4 block",
+            isRed ? "text-white/60" : "text-revolutionary-red"
           )}
         >
+          {number}
+        </span>
+      )}
+      {badge && !number && (
+        <span className="font-label-mono text-revolutionary-red text-sm uppercase tracking-widest mb-4 block">
           {badge}
         </span>
       )}
-      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+      <h3
+        className={cn(
+          "font-display text-xl md:text-2xl font-bold leading-tight mb-4",
+          isRed ? "text-white" : "text-on-surface"
+        )}
+      >
         {title}
       </h3>
       {description && (
-        <p className="text-sm text-muted-foreground mb-4">{description}</p>
+        <p
+          className={cn(
+            "text-base mb-4 leading-relaxed",
+            isRed ? "text-white/90" : "text-on-surface-variant"
+          )}
+        >
+          {description}
+        </p>
       )}
-      <div className="text-muted-foreground leading-relaxed">{children}</div>
+      <div className={cn("text-base leading-relaxed", isRed ? "text-white/90" : "text-on-surface-variant")}>
+        {children}
+      </div>
     </div>
   )
 }
 
 interface SectionHeaderProps {
   badge: string
-  title: string
+  title: ReactNode
   description?: string
+  align?: "left" | "center"
   className?: string
 }
 
@@ -74,20 +88,26 @@ export function SectionHeader({
   badge,
   title,
   description,
+  align = "left",
   className,
 }: SectionHeaderProps) {
   return (
-    <div className={cn("text-center mb-12", className)}>
-      <p className="text-xs text-primary uppercase tracking-widest mb-4">
+    <div
+      className={cn(
+        "mb-12 md:mb-20 max-w-4xl",
+        align === "center" && "mx-auto text-center",
+        className
+      )}
+    >
+      <span className="font-label-mono text-revolutionary-red uppercase tracking-[0.4em] mb-4 block text-sm">
         {badge}
-      </p>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
+      </span>
+      <h2 className="font-display text-3xl md:text-5xl lg:text-[64px] lg:leading-[72px] font-extrabold text-on-surface mb-6 tracking-tight">
         {title}
       </h2>
+      {align === "center" && <div className="w-40 h-0.5 bg-golden-silk mx-auto mb-8" />}
       {description && (
-        <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          {description}
-        </p>
+        <p className="text-lg text-on-surface-variant leading-relaxed max-w-3xl">{description}</p>
       )}
     </div>
   )
@@ -97,16 +117,36 @@ interface StatCardProps {
   value: string
   label: string
   description?: string
+  accent?: "red" | "gold" | "grey"
   className?: string
 }
 
-export function StatCard({ value, label, description, className }: StatCardProps) {
+export function StatCard({
+  value,
+  label,
+  description,
+  accent = "red",
+  className,
+}: StatCardProps) {
+  const barColor = {
+    red: "bg-revolutionary-red",
+    gold: "bg-golden-silk",
+    grey: "bg-monument-grey",
+  }[accent]
+
   return (
-    <div className={cn("text-center p-6 rounded-lg bg-card border border-border", className)}>
-      <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{value}</div>
-      <div className="text-sm font-medium text-foreground mb-1">{label}</div>
+    <div className={cn("space-y-4 group", className)}>
+      <div className="flex items-start gap-3">
+        <div className={`w-0.5 h-16 ${barColor} group-hover:h-20 transition-all duration-300`} />
+        <div>
+          <div className="font-display text-3xl md:text-4xl font-black text-on-surface">{value}</div>
+          <div className="font-label-mono text-xs uppercase tracking-widest text-on-surface-variant mt-1">
+            {label}
+          </div>
+        </div>
+      </div>
       {description && (
-        <div className="text-xs text-muted-foreground">{description}</div>
+        <p className="text-sm text-on-surface-variant leading-relaxed">{description}</p>
       )}
     </div>
   )
@@ -122,13 +162,13 @@ export function FeatureItem({ icon, title, description }: FeatureItemProps) {
   return (
     <div className="flex gap-4">
       {icon && (
-        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+        <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center text-golden-silk">
           {icon}
         </div>
       )}
       <div>
-        <h4 className="font-semibold text-foreground mb-1">{title}</h4>
-        <p className="text-sm text-muted-foreground">{description}</p>
+        <h4 className="font-semibold text-on-surface mb-1">{title}</h4>
+        <p className="text-sm text-on-surface-variant">{description}</p>
       </div>
     </div>
   )
@@ -140,9 +180,9 @@ interface ListItemProps {
 
 export function ListItem({ children }: ListItemProps) {
   return (
-    <li className="flex items-start gap-3">
-      <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2" />
-      <span>{children}</span>
+    <li className="flex items-start gap-4 mb-3 text-on-surface-variant">
+      <span className="flex-shrink-0 w-8 h-0.5 bg-revolutionary-red mt-3" />
+      <span className="text-base">{children}</span>
     </li>
   )
 }
@@ -158,22 +198,34 @@ export function SourceLink({ href, children }: SourceLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors"
+      className="inline-flex items-center gap-1 font-label-mono text-xs text-golden-silk hover:text-primary transition-colors uppercase tracking-wider"
     >
       {children}
-      <svg
-        className="w-3 h-3"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-        />
-      </svg>
+      <span aria-hidden>↗</span>
     </a>
+  )
+}
+
+export function SectionWrap({
+  id,
+  children,
+  className,
+  variant = "default",
+}: {
+  id?: string
+  children: ReactNode
+  className?: string
+  variant?: "default" | "low" | "high"
+}) {
+  const bg = {
+    default: "bg-background",
+    low: "bg-surface-container-low",
+    high: "bg-surface-container-low border-t-8 border-monument-grey",
+  }[variant]
+
+  return (
+    <section id={id} className={cn("py-16 md:py-section-gap", bg, className)}>
+      <div className="exhibition-container">{children}</div>
+    </section>
   )
 }
