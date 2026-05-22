@@ -36,30 +36,31 @@ export function HeroSection() {
             // eslint-disable-next-line @next/next/no-img-element
             <img
               alt="Quốc hội Việt Nam"
-              className="w-full h-full object-cover opacity-70"
+              className="w-full h-full object-cover opacity-85"
               src={getPresentationImage(0)}
             />
           ) : (
             <div className="w-full h-full bg-surface-container-high" />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/15" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/35 to-transparent" />
           <div className="grain-overlay absolute inset-0" />
         </div>
 
         <div className="relative z-10 w-full exhibition-container pb-16 md:pb-24 pt-32">
           <div className="flex flex-col md:flex-row items-baseline gap-4 mb-8 hero-animate-in hero-animate-in-delay-1">
-            <span className="font-label-mono text-base md:text-lg text-golden-silk uppercase tracking-[0.3em]">
-              Triển lãm số: 1986 — 2026
+            <span className="font-label-mono text-base md:text-lg text-revolutionary-red uppercase tracking-[0.3em]">
+              MLN131 - Lý luận chính trị 
             </span>
-            <div className="h-0.5 flex-grow bg-monument-grey max-md:hidden hero-line-grow" />
+            <div className="h-0.5 flex-grow bg-golden-silk/70 max-md:hidden hero-line-grow" />
           </div>
-          <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-[120px] lg:leading-[110px] font-black text-white mb-6 uppercase tracking-tight hero-animate-in hero-animate-in-delay-2">
-            Kỷ Nguyên
+          <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-[120px] lg:leading-[110px] font-black text-on-surface mb-6 uppercase tracking-tight hero-animate-in hero-animate-in-delay-2">
+            Thành tựu 
             <br />
-            <span className="text-revolutionary-red">Vươn Mình</span>
+            <span className="text-revolutionary-red">xây dựng Chủ nghĩa Xã hội sau 40 năm Đổi mới</span>
           </h1>
           <p className="font-sans text-xl md:text-2xl max-w-2xl text-on-surface-variant leading-relaxed hero-animate-in hero-animate-in-delay-3">
-            Thuyết trình: Thành tựu xây dựng chủ nghĩa xã hội sau 40 năm Đổi mới — MLN131
+            GVHD: Thầy Trần Ngọc Lâm
           </p>
         </div>
       </section>

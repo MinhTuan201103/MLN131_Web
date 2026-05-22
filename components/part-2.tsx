@@ -1,20 +1,17 @@
 import {
-  ContentCard,
   SectionHeader,
-  StatCard,
-  ListItem,
   SourceLink,
   SectionWrap,
 } from "@/components/content-card"
-import { MediaBlock } from "@/components/media-block"
-import { Reveal, RevealStagger } from "@/components/reveal"
+import { EvidenceStatStrip, GdpTimelineChart, ReformFlowDiagram } from "@/components/data-visuals"
+import { RevealStagger } from "@/components/reveal"
 
 const LIMITATIONS = [
-  "Năng suất, cạnh tranh, mô hình tăng trưởng",
-  "Thể chế kinh tế thị trường — môi trường đầu tư",
+  "Năng suất và cạnh tranh",
+  "Thể chế, môi trường đầu tư",
   "Chênh lệch giàu nghèo",
-  "Môi trường, biến đổi khí hậu",
-  "Cụ thể hóa, thể chế hóa nghị quyết",
+  "Môi trường, khí hậu",
+  "Thực thi chính sách",
 ]
 
 export function Part2BoiCanh() {
@@ -29,42 +26,13 @@ export function Part2BoiCanh() {
         }
       />
 
-      <MediaBlock
-        imageSlot={6}
-        className="mb-12"
-        alt="Timeline đổi mới"
-        aspect="wide"
-        captionSize="large"
-      />
+      <EvidenceStatStrip />
+      <GdpTimelineChart />
+      <ReformFlowDiagram />
 
-      <RevealStagger staggerMs={100} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-        <StatCard value="774,7%" label="Lạm phát 1986" accent="red" />
-        <StatCard value="< $700" label="GDP/người 1986" accent="gold" />
-        <StatCard value="~$4.500" label="GDP/người 2023" accent="gold" />
-        <StatCard value="Top 32" label="Thế giới 2025" accent="grey" />
-      </RevealStagger>
-
-      <div className="grid md:grid-cols-2 gap-8 mb-12 items-start">
-        <MediaBlock imageSlot={7} alt="Khủng hoảng trước 1986" aspect="hero" captionSize="large" />
-        <div className="flex flex-col gap-6">
-          <ContentCard variant="red" badge="1–2" title="Khủng hoảng & Lạm phát">
-            <p>
-              Đại hội VI: sản xuất chậm, phân phối rối ren, đời sống khó khăn.
-            </p>
-            <p className="mt-2 font-semibold text-golden-silk">1986: lạm phát 774,7%</p>
-          </ContentCard>
-          <ContentCard badge="3–4" title="Bao cấp · Thiếu hàng">
-            <ul>
-              <ListItem>Xóa bỏ tập trung quan liêu, bao cấp</ListItem>
-              <ListItem>3 chương trình: lương thực — tiêu dùng — xuất khẩu</ListItem>
-            </ul>
-          </ContentCard>
-        </div>
-      </div>
-
-      <p className="relative z-10 text-center font-display text-2xl md:text-3xl text-on-surface mb-8 max-w-4xl mx-auto font-semibold">
-        Đổi mới = giải phóng lực lượng sản xuất khỏi cơ chế cũ · ổn định đời sống · thoát khủng
-        hoảng
+      <p className="relative z-10 text-center font-display text-2xl md:text-3xl text-on-surface mb-10 max-w-4xl mx-auto font-semibold">
+        Đổi mới = giải phóng lực lượng sản xuất khỏi cơ chế cũ, ổn định đời sống, rồi tiếp tục hoàn
+        thiện mô hình XHCN Việt Nam.
       </p>
 
       <h3 className="font-label-mono text-center text-golden-silk uppercase tracking-widest mb-6 text-lg md:text-xl font-semibold">
@@ -90,8 +58,14 @@ export function Part2BoiCanh() {
         <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-vi/dai-hoi-dai-bieu-toan-quoc-lan-thu-vi-cua-dang-19">
           Đại hội VI
         </SourceLink>
-        <SourceLink href="https://www.worldbank.org/en/country/vietnam/overview.print">
-          World Bank
+        <SourceLink href="https://moit.gov.vn/gioi-thieu/cac-thoi-ky-phat-trien/giai-doan-1975-1985.html">
+          Bộ Công Thương
+        </SourceLink>
+        <SourceLink href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=VN">
+          World Bank GDP/người
+        </SourceLink>
+        <SourceLink href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=VN">
+          World Bank GDP
         </SourceLink>
         <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-xiii/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-dang-khoa-xii-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-xiii-cua-3734">
           Báo cáo Đại hội XIII

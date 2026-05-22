@@ -20,7 +20,7 @@ const ACHIEVEMENTS = [
 export function Part4VanHoaXaHoi() {
   return (
     <section id="part-4" className="bg-surface-container-low">
-      <div className="relative py-16 md:py-24 overflow-hidden bg-monument-grey">
+      <div className="relative py-16 md:py-24 overflow-hidden bg-surface-container-high">
         <Reveal className="exhibition-container grid md:grid-cols-2 gap-12 items-center">
           <div>
             <MediaBlock

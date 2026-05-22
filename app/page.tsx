@@ -1,5 +1,4 @@
 import { SiteHeader } from "@/components/site-header"
-import { ExhibitionRail } from "@/components/exhibition-rail"
 import { HeroSection } from "@/components/hero-section"
 import { Part1CoSoLyLuan } from "@/components/part-1"
 import { Part2BoiCanh } from "@/components/part-2"
@@ -12,7 +11,6 @@ import { Footer } from "@/components/footer"
 export default function Home() {
   return (
     <>
-      <ExhibitionRail />
       <div className="exhibition-main">
         <SiteHeader />
         <main>

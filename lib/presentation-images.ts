@@ -40,7 +40,7 @@ export const PRESENTATION_IMAGES: Record<number, string> = {
 
   // Hero — ảnh thật: Quốc hội, Ba Đình, đại lộ Hà Nội
 
-  0: `https://lh5.googleusercontent.com/proxy/loTkC70bhmApsTiRU99ARkI3xhNT1Uu3L4dYJIPSlA9y15yfLG0zffrC5ILtQOLS9-vliB7X8v6C3KA4DzcBXfmdhIbW0PEhoLxMPzRiSf6tdx7MDkBJbOfn-qRUh0649ClRjqGitln2jjMX`,
+  0: "/images/image.png",
 
 
 
@@ -499,5 +499,4 @@ export const IMAGE_SLOT_GUIDE: Record<
   },
 
 }
-
 

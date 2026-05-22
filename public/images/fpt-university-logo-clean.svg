@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 128" role="img" aria-labelledby="title desc">
+  <title id="title">FPT University</title>
+  <desc id="desc">FPT University logo on a transparent background.</desc>
+  <g transform="translate(22 10) skew(-10)">
+    <rect x="0" y="0" width="72" height="58" rx="10" fill="#005baa"/>
+    <rect x="62" y="0" width="72" height="58" rx="10" fill="#f37021"/>
+    <rect x="124" y="0" width="72" height="58" rx="10" fill="#68bd45"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900" fill="#fff">
+    <text x="58" y="53" font-size="46" transform="skew(-10)">F</text>
+    <text x="122" y="53" font-size="46" transform="skew(-10)">P</text>
+    <text x="186" y="53" font-size="46" transform="skew(-10)">T</text>
+  </g>
+  <circle cx="238" cy="27" r="8" fill="none" stroke="#005baa" stroke-width="3"/>
+  <text x="233" y="31" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#005baa">R</text>
+  <text x="22" y="111" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0475bc">
+    Fpt University
+  </text>
+</svg>

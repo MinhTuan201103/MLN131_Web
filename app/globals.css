@@ -1,41 +1,41 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-/* VIETNAM 40 — stitch design system */
+/* VIETNAM 40 — light presentation system */
 :root {
-  --background: #111415;
-  --foreground: #e2e2e4;
-  --card: #1e2021;
-  --card-foreground: #e2e2e4;
-  --popover: #1e2021;
-  --popover-foreground: #e2e2e4;
-  --primary: #ffb4a8;
-  --primary-foreground: #690000;
-  --secondary: #1a1c1d;
-  --secondary-foreground: #e2e2e4;
-  --muted: #282a2c;
-  --muted-foreground: #e6bdb7;
-  --accent: #ffd700;
+  --background: #f5f8fb;
+  --foreground: #17212b;
+  --card: #ffffff;
+  --card-foreground: #17212b;
+  --popover: #ffffff;
+  --popover-foreground: #17212b;
+  --primary: #c40000;
+  --primary-foreground: #ffffff;
+  --secondary: #edf2f7;
+  --secondary-foreground: #17212b;
+  --muted: #e5ebf1;
+  --muted-foreground: #566575;
+  --accent: #d69e00;
   --accent-foreground: #221b00;
-  --destructive: #b20000;
+  --destructive: #c40000;
   --destructive-foreground: #ffffff;
-  --border: #2c2c2e;
-  --input: #333537;
-  --ring: #b20000;
+  --border: #d4dde7;
+  --input: #dce4ed;
+  --ring: #c40000;
   --radius: 0.25rem;
-  --revolutionary-red: #b20000;
-  --golden-silk: #ffd700;
-  --monument-grey: #2c2c2e;
-  --surface: #111415;
-  --surface-container: #1e2021;
-  --surface-container-low: #1a1c1d;
-  --surface-container-high: #282a2c;
-  --surface-container-highest: #333537;
-  --surface-container-lowest: #0c0e10;
-  --on-surface: #e2e2e4;
-  --on-surface-variant: #e6bdb7;
-  --secondary-fixed: #ffe16d;
-  --primary-container: #b20000;
+  --revolutionary-red: #c40000;
+  --golden-silk: #d69e00;
+  --monument-grey: #cfd8e3;
+  --surface: #f5f8fb;
+  --surface-container: #ffffff;
+  --surface-container-low: #edf3f8;
+  --surface-container-high: #e7eef5;
+  --surface-container-highest: #dce6ef;
+  --surface-container-lowest: #ffffff;
+  --on-surface: #17212b;
+  --on-surface-variant: #4f5f6f;
+  --secondary-fixed: #f5c542;
+  --primary-container: #c40000;
   --gutter: 32px;
   --section-gap: 120px;
   --container-max: 1440px;
@@ -129,7 +129,7 @@
     font-weight: 800;
   }
   ::selection {
-    background-color: #b20000;
+    background-color: #c40000;
     color: #fff;
   }
 }
@@ -158,7 +158,7 @@
 
 .exhibition-rail {
   width: 80px;
-  border-right: 1px solid #2c2c2e;
+  border-right: 1px solid #cfd8e3;
 }
 
 .exhibition-container {
@@ -169,10 +169,8 @@
   padding-right: var(--gutter);
 }
 
-@media (min-width: 768px) {
-  .exhibition-main {
-    margin-left: 80px;
-  }
+.exhibition-main {
+  margin-left: 0;
 }
 
 ::-webkit-scrollbar {
@@ -336,7 +334,7 @@ html {
 
 .exhibition-card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgb(0 0 0 / 0.35);
+  box-shadow: 0 16px 36px rgb(23 33 43 / 0.14);
 }
 
 .exhibition-image-hover {
