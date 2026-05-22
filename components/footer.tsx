@@ -10,7 +10,7 @@ export function Footer() {
           </div>
           <p className="text-on-surface-variant max-w-sm leading-relaxed">
             Sản phẩm sáng tạo học tập — Triển lãm kỹ thuật số tôn vinh 40 năm đổi mới và thành tựu
-            xây dựng CNXH tại Việt Nam.
+            xây dựng chủ nghĩa xã hội tại Việt Nam.
           </p>
           <div className="flex flex-wrap gap-6">
             {[
@@ -48,7 +48,7 @@ export function Footer() {
             </button>
           </div>
           <p className="font-label-mono text-on-surface-variant uppercase tracking-widest text-xs">
-            Nguồn: Văn kiện ĐH XIII · Cổng Tư liệu Đảng · World Bank
+            Nguồn: Văn kiện Đại hội XIII · Cổng Tư liệu Đảng · World Bank
           </p>
           <p className="font-label-mono text-on-surface-variant uppercase tracking-widest text-xs mt-2">
             © 2026 · Chủ nghĩa Xã hội Khoa học · MLN131

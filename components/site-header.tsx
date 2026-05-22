@@ -14,11 +14,11 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b-4 border-revolutionary-red">
+    <header className="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b-4 border-revolutionary-red site-header-enter">
       <nav className="flex justify-between items-center h-20 md:h-24 exhibition-container">
         <a
           href="#"
-          className="font-display text-xl md:text-[32px] font-black tracking-tighter text-revolutionary-red"
+          className="font-display text-xl md:text-[32px] font-black tracking-tighter text-revolutionary-red transition-transform duration-300 hover:scale-[1.02]"
         >
           VIETNAM 40
         </a>
@@ -30,7 +30,7 @@ export function SiteHeader() {
               className={
                 item.active
                   ? "text-golden-silk font-bold border-b-2 border-golden-silk pb-1 font-label-mono text-sm uppercase tracking-widest transition-all duration-300"
-                  : "text-on-surface-variant font-label-mono text-sm uppercase tracking-widest hover:text-golden-silk transition-all duration-300"
+                  : "text-on-surface-variant font-label-mono text-sm uppercase tracking-widest hover:text-golden-silk hover:-translate-y-0.5 transition-all duration-300"
               }
             >
               {item.label}

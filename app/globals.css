@@ -42,9 +42,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-body), 'Libre Franklin', system-ui, sans-serif;
+  --font-sans: var(--font-body), 'Inter', system-ui, sans-serif;
   --font-display: var(--font-display-family), 'Montserrat', system-ui, sans-serif;
-  --font-mono: var(--font-mono-label), 'JetBrains Mono', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -83,6 +82,34 @@
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
+
+  /* Cỡ chữ thuyết trình — đọc được khi chiếu / ngồi xa */
+  --text-xs: 0.9375rem;
+  --text-xs--line-height: 1.375rem;
+  --text-sm: 1.125rem;
+  --text-sm--line-height: 1.625rem;
+  --text-base: 1.4375rem;
+  --text-base--line-height: 2.05rem;
+  --text-lg: 1.6875rem;
+  --text-lg--line-height: 2.35rem;
+  --text-xl: 1.9375rem;
+  --text-xl--line-height: 2.5rem;
+  --text-2xl: 2.25rem;
+  --text-2xl--line-height: 2.75rem;
+  --text-3xl: 2.75rem;
+  --text-3xl--line-height: 3.25rem;
+  --text-4xl: 3.375rem;
+  --text-4xl--line-height: 1.15;
+  --text-5xl: 4.25rem;
+  --text-5xl--line-height: 1.1;
+  --text-6xl: 5.25rem;
+  --text-6xl--line-height: 1.05;
+  --text-7xl: 6.5rem;
+  --text-7xl--line-height: 1.05;
+  --text-8xl: 8rem;
+  --text-8xl--line-height: 1;
+  --text-9xl: 9.5rem;
+  --text-9xl--line-height: 1;
 }
 
 @layer base {
@@ -90,7 +117,16 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    @apply bg-background text-foreground font-sans font-normal antialiased overflow-x-hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display-family), 'Montserrat', system-ui, sans-serif;
+    font-weight: 800;
   }
   ::selection {
     background-color: #b20000;
@@ -102,8 +138,11 @@
   font-family: var(--font-display-family), 'Montserrat', system-ui, sans-serif;
 }
 
+/* Nhãn phụ (phần, badge) — cùng Inter, đậm hơn nội dung một bậc */
 .font-label-mono {
-  font-family: var(--font-mono-label), 'JetBrains Mono', monospace;
+  font-family: var(--font-body), 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .grain-overlay {
@@ -152,4 +191,193 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* —— Chuyển động triển lãm —— */
+.motion-reveal {
+  opacity: 0;
+  transition:
+    opacity var(--motion-duration, 750ms) cubic-bezier(0.22, 1, 0.36, 1),
+    transform var(--motion-duration, 750ms) cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--motion-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.motion-fade-up {
+  transform: translateY(2.5rem);
+}
+
+.motion-fade-in {
+  transform: none;
+}
+
+.motion-fade-left {
+  transform: translateX(-2.5rem);
+}
+
+.motion-fade-right {
+  transform: translateX(2.5rem);
+}
+
+.motion-scale-in {
+  transform: scale(0.94);
+}
+
+.motion-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero — vào trang */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-line-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes hero-ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes header-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rail-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer-gold {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero-animate-in {
+  animation: hero-fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.hero-animate-in-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.hero-animate-in-delay-2 {
+  animation-delay: 0.3s;
+}
+
+.hero-animate-in-delay-3 {
+  animation-delay: 0.45s;
+}
+
+.hero-animate-in-delay-4 {
+  animation-delay: 0.6s;
+}
+
+.hero-line-grow {
+  transform-origin: left center;
+  animation: hero-line-grow 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.5s backwards;
+}
+
+.hero-bg-zoom img,
+.hero-bg-zoom > div {
+  animation: hero-ken-burns 24s ease-out forwards;
+}
+
+.site-header-enter {
+  animation: header-slide-down 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.exhibition-rail-enter {
+  animation: rail-fade-in 1.2s ease 0.3s backwards;
+}
+
+/* Hover — thẻ & ảnh */
+.exhibition-card-hover {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.exhibition-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.35);
+}
+
+.exhibition-image-hover {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .exhibition-image-hover {
+  transform: scale(1.03);
+}
+
+.stat-bar-grow {
+  transform-origin: top;
+  transition: height 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-reveal {
+    opacity: 1;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-animate-in,
+  .hero-line-grow,
+  .hero-bg-zoom img,
+  .hero-bg-zoom > div,
+  .site-header-enter,
+  .exhibition-rail-enter {
+    animation: none !important;
+  }
+
+  .exhibition-card-hover:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .group:hover .exhibition-image-hover {
+    transform: none;
+  }
 }

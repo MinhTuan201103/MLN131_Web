@@ -4,14 +4,20 @@ import {
   ListItem,
   SourceLink,
   SectionWrap,
+  SlideCardGrid,
 } from "@/components/content-card"
-import { Factory } from "lucide-react"
+import { MediaBlock } from "@/components/media-block"
+import { Reveal, RevealStagger } from "@/components/reveal"
 
-const traitsRest = [
-  { n: "05.", title: "Con người hạnh phúc", desc: "Ấm no, tự do, hạnh phúc." },
-  { n: "06.", title: "Đoàn kết dân tộc", desc: "Bình đẳng, tôn trọng lẫn nhau." },
-  { n: "07.", title: "Nhà nước pháp quyền XHCN", desc: "Của dân, do dân, vì dân." },
-  { n: "08.", title: "Hữu nghị quốc tế", desc: "Hợp tác quốc tế." },
+const EIGHT_TRAITS = [
+  "Dân giàu, nước mạnh, dân chủ, công bằng, văn minh",
+  "Nhân dân làm chủ",
+  "Kinh tế phát triển cao — lực lượng sản xuất hiện đại",
+  "Văn hóa tiên tiến, đậm bản sắc dân tộc",
+  "Con người ấm no, tự do, hạnh phúc",
+  "Dân tộc bình đẳng, đoàn kết",
+  "Nhà nước pháp quyền xã hội chủ nghĩa — do Đảng lãnh đạo",
+  "Hữu nghị, hợp tác quốc tế",
 ]
 
 export function Part1CoSoLyLuan() {
@@ -21,87 +27,126 @@ export function Part1CoSoLyLuan() {
         badge="Phần 1 · Cơ sở lý luận"
         title={
           <>
-            Nền Tảng <span className="text-revolutionary-red">Lý Luận</span>
+            Chúng Ta Đang Xây Dựng <span className="text-revolutionary-red">Cái Gì?</span>
           </>
         }
-        description="Kiên định CM-Lênin và tư tưởng Hồ Chí Minh — kim chỉ nam cho công cuộc xây dựng CNXH tại Việt Nam."
       />
 
-      <div className="mb-12 md:mb-20 text-center">
-        <span className="font-label-mono text-revolutionary-red uppercase tracking-[0.4em] mb-4 block text-sm">
-          Cương lĩnh 2011
+      <Reveal variant="fade-up" className="grid md:grid-cols-2 gap-8 mb-12 items-center">
+        <div>
+          <span className="font-label-mono text-golden-silk text-base md:text-lg uppercase tracking-widest mb-3 block font-semibold">
+            1. Khái niệm chủ nghĩa xã hội
+          </span>
+          <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-4">
+            Chế độ xã hội mới — giai đoạn đầu hình thái kinh tế-xã hội cộng sản: giải phóng con
+            người, phát triển lực lượng sản xuất, công bằng, dân chủ.
+          </p>
+          <p className="text-lg md:text-xl text-on-surface-variant">
+            Ở Việt Nam: mô hình <strong className="text-on-surface">tổng hợp</strong> — kinh tế,
+            chính trị, văn hóa, xã hội, con người, dân tộc, nhà nước, quan hệ quốc tế.
+          </p>
+        </div>
+        <MediaBlock
+          imageSlot={1}
+          alt="Đại đoàn kết — cơ sở xây dựng chủ nghĩa xã hội"
+          aspect="hero"
+          captionSize="large"
+        />
+      </Reveal>
+
+      <div className="mb-8 text-center">
+        <span className="font-label-mono text-revolutionary-red uppercase tracking-[0.4em] text-base md:text-lg block mb-2 font-semibold">
+          2. Cương lĩnh 2011
         </span>
-        <h3 className="font-display text-2xl md:text-4xl font-extrabold text-on-surface">
-          8 Đặc Trưng của Xã Hội XHCN
+        <h3 className="font-display text-3xl md:text-4xl font-extrabold text-on-surface">
+          8 đặc trưng xã hội chủ nghĩa
         </h3>
-        <div className="w-40 h-0.5 bg-golden-silk mx-auto mt-6" />
+        <div className="w-32 h-0.5 bg-golden-silk mx-auto mt-4" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-        <ContentCard number="01." title="Dân giàu, nước mạnh" description="Dân chủ, công bằng, văn minh.">
-          <p className="text-sm">Mục tiêu tổng quát của xã hội XHCN ở Việt Nam.</p>
-        </ContentCard>
-        <ContentCard variant="wide" number="02." title="Kinh tế XHCN" className="md:col-span-2">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 w-full">
-            <p className="text-sm md:max-w-md">
-              Phát triển cao, dựa trên lực lượng sản xuất hiện đại và quan hệ sản xuất tiến bộ.
-            </p>
-            <Factory className="hidden md:block w-20 h-20 text-monument-grey opacity-40 shrink-0" />
+      <MediaBlock imageSlot={2} className="mb-8" alt="8 đặc trưng" aspect="wide" captionSize="large" />
+
+      <RevealStagger
+        staggerMs={80}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-12 items-stretch"
+      >
+        {EIGHT_TRAITS.map((t, i) => (
+          <div
+            key={i}
+            className="p-4 bg-surface-container border border-monument-grey hover:border-revolutionary-red exhibition-card-hover h-full min-h-[88px]"
+          >
+            <span className="font-label-mono text-revolutionary-red text-lg font-bold">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <p className="text-base md:text-lg text-on-surface mt-2 leading-snug">{t}</p>
           </div>
-        </ContentCard>
-        <ContentCard number="03." title="Đoàn kết dân tộc" description="Sức mạnh cốt lõi.">
-          <p className="text-sm">Các dân tộc bình đẳng, đoàn kết, tôn trọng lẫn nhau.</p>
-        </ContentCard>
-        <ContentCard variant="red" number="04." title="Lãnh đạo của Đảng" className="md:col-span-2">
-          <p className="text-sm">
-            Sự lãnh đạo của Đảng CSVN là nhân tố quyết định mọi thắng lợi của công cuộc đổi mới.
-          </p>
-        </ContentCard>
-        <ContentCard variant="gold" number="Vision 2045" title="Nước phát triển, thu nhập cao" className="md:col-span-2">
-          <p className="text-sm">Giữa thế kỷ 21 — hoàn thiện CSVC của CNXH.</p>
-        </ContentCard>
-        {traitsRest.map((t) => (
-          <ContentCard key={t.n} number={t.n} title={t.title} description={t.desc} />
         ))}
-      </div>
+      </RevealStagger>
 
-      <div className="grid gap-4 md:grid-cols-3 mb-12">
-        <ContentCard badge="Khái niệm" title="Chủ nghĩa Xã hội">
-          <p className="text-sm mb-3">
-            Chế độ xã hội mới — giai đoạn đầu của hình thái KT-XH cộng sản chủ nghĩa:
-          </p>
-          <ul>
-            <ListItem>Giải phóng con người</ListItem>
-            <ListItem>Phát triển lực lượng sản xuất</ListItem>
-            <ListItem>Công bằng, dân chủ, tiến bộ xã hội</ListItem>
-          </ul>
-        </ContentCard>
-        <ContentCard variant="red" badge="Lý luận" title='"Bỏ qua" chế độ TBCN'>
-          <ul className="text-sm">
-            <ListItem>Không thiết lập thống trị QHSX TBCN</ListItem>
-            <ListItem>Tiếp thu thành tựu văn minh nhân loại</ListItem>
-            <ListItem>Kinh tế thị trường phát triển LLSX</ListItem>
-          </ul>
-        </ContentCard>
-        <ContentCard badge="Mô hình VN" title="Kinh tế thị trường định hướng XHCN">
-          <ul className="text-sm">
-            <ListItem>Nhà nước pháp quyền XHCN</ListItem>
-            <ListItem>Nhân dân làm chủ</ListItem>
-            <ListItem>Hội nhập giữ độc lập, tự chủ</ListItem>
-          </ul>
-          <div className="mt-4 pt-4 border-t border-monument-grey">
-            <SourceLink href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/gioi-thieu-van-kien-dang/ve-cac-dac-trung-cua-chu-nghia-xa-hoi-qua-cuong-linh-1991-va-cuong-linh-2011-cua-dang-cong-san-viet-nam-865">
-              Cổng Tư liệu — Văn kiện Đảng
-            </SourceLink>
-          </div>
-        </ContentCard>
-      </div>
+      <SlideCardGrid
+        className="mb-12"
+        items={[
+          {
+            card: (
+              <ContentCard badge="3. Quá độ" title="Lâu dài vì xuất phát thấp">
+                <p>
+                  Nông nghiệp lạc hậu · hậu quả chiến tranh · lực lượng sản xuất thấp · cơ sở vật
+                  chất chưa có sẵn.
+                </p>
+                <p className="mt-2 text-golden-silk font-semibold">
+                  Mục tiêu (Đại hội XI): nền tảng kinh tế chủ nghĩa xã hội + kiến trúc chính trị,
+                  thể chế, văn hóa phù hợp.
+                </p>
+              </ContentCard>
+            ),
+            media: <MediaBlock imageSlot={3} alt="Thời kỳ quá độ" aspect="video" captionSize="large" />,
+          },
+          {
+            card: (
+              <ContentCard
+                variant="red"
+                badge='4. "Bỏ qua" tư bản chủ nghĩa'
+                title="Không phủ nhận văn minh nhân loại"
+              >
+                <ul>
+                  <ListItem>Không thống trị quan hệ sản xuất tư bản chủ nghĩa</ListItem>
+                  <ListItem>Tiếp thu khoa học-công nghệ, quản lý, kinh tế thị trường</ListItem>
+                </ul>
+              </ContentCard>
+            ),
+            media: (
+              <MediaBlock imageSlot={4} alt="Bỏ qua tư bản chủ nghĩa" aspect="video" captionSize="large" />
+            ),
+          },
+          {
+            card: (
+              <ContentCard badge="5. Mô hình Việt Nam" title="Kinh tế thị trường định hướng xã hội chủ nghĩa">
+                <ul>
+                  <ListItem>Nhà nước pháp quyền xã hội chủ nghĩa · Nhân dân làm chủ</ListItem>
+                  <ListItem>Đảng lãnh đạo · Hội nhập, giữ độc lập</ListItem>
+                </ul>
+                <div className="mt-auto pt-4 border-t border-monument-grey">
+                  <SourceLink href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/gioi-thieu-van-kien-dang/cac-van-kien-dai-hoi-xiii-cua-dang-da-tiep-thu-co-chon-loc-nhung-gia-tri-chung-cua-nhan-loai-3769">
+                    Văn kiện Đại hội XIII
+                  </SourceLink>
+                </div>
+              </ContentCard>
+            ),
+            media: <MediaBlock imageSlot={5} alt="Mô hình Việt Nam" aspect="video" captionSize="large" />,
+          },
+        ]}
+      />
 
-      <p className="text-on-surface-variant border-l-4 border-golden-silk pl-6 text-lg leading-relaxed max-w-4xl">
-        Thành tựu sau 40 năm đổi mới là đánh giá quá trình{" "}
-        <strong className="text-on-surface">xây dựng mô hình CNXH Việt Nam</strong> — kinh tế đi cùng
-        ổn định chính trị, tiến bộ xã hội và hội nhập quốc tế.
-      </p>
+      <blockquote className="border-l-4 border-golden-silk pl-6 text-xl md:text-2xl text-on-surface max-w-4xl font-semibold">
+        <strong>Chốt phần 1:</strong> Thành tựu 40 năm = đánh giá xây dựng{" "}
+        <span className="text-revolutionary-red">mô hình chủ nghĩa xã hội Việt Nam</span> — không
+        chỉ GDP.
+      </blockquote>
+      <div className="mt-4">
+        <SourceLink href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/gioi-thieu-van-kien-dang/ve-cac-dac-trung-cua-chu-nghia-xa-hoi-qua-cuong-linh-1991-va-cuong-linh-2011-cua-dang-cong-san-viet-nam-865">
+          8 đặc trưng — Cổng Tư liệu Đảng
+        </SourceLink>
+      </div>
     </SectionWrap>
   )
 }

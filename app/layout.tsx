@@ -1,23 +1,19 @@
 import type { Metadata } from 'next'
-import { Montserrat, JetBrains_Mono, Libre_Franklin } from 'next/font/google'
+import { Montserrat, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
+/** Tiêu đề — Montserrat Bold / ExtraBold / Black */
 const montserrat = Montserrat({
   subsets: ['latin', 'vietnamese'],
   weight: ['700', '800', '900'],
   variable: '--font-display-family',
 })
 
-const jetbrainsMono = JetBrains_Mono({
+/** Nội dung — Inter Regular */
+const inter = Inter({
   subsets: ['latin', 'vietnamese'],
-  weight: ['500'],
-  variable: '--font-mono-label',
-})
-
-const libreFranklin = Libre_Franklin({
-  subsets: ['latin', 'vietnamese'],
-  weight: ['400', '600'],
+  weight: ['400', '500', '600'],
   variable: '--font-body',
 })
 
@@ -36,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="vi" className={`${montserrat.variable} ${jetbrainsMono.variable} ${libreFranklin.variable}`}>
-      <body className="bg-background text-on-surface">
+    <html lang="vi" className={`${montserrat.variable} ${inter.variable}`}>
+      <body className="bg-background text-on-surface font-sans font-normal">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
