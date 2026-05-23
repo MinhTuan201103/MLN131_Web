@@ -18,13 +18,19 @@ export function SiteHeader() {
         </a>
         <a
           href="#"
-          className="flex items-center justify-end shrink-0 transition-transform duration-300 hover:scale-[1.01]"
-          aria-label="Cờ Đảng"
+          className="flex items-center justify-end shrink-0 gap-3 transition-transform duration-300 hover:scale-[1.01]"
+          aria-label="Cờ Đảng và Cờ Việt Nam"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/party-flag-logo.svg"
+            src="/dang.png"
             alt="Cờ Đảng"
+            className="h-12 w-16 object-contain drop-shadow-[0_8px_18px_rgb(255_255_255_/_0.75)] md:h-16 md:w-24"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/vn.webp"
+            alt="Cờ Việt Nam"
             className="h-12 w-16 object-contain drop-shadow-[0_8px_18px_rgb(255_255_255_/_0.75)] md:h-16 md:w-24"
           />
         </a>

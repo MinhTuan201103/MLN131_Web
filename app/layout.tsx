@@ -20,7 +20,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'VIETNAM 40 | Thành tựu xây dựng Chủ nghĩa Xã hội sau 40 năm Đổi mới',
   description:
-    'Thành tựu xây dựng Chủ nghĩa Xã hội sau 40 năm Đổi mới tại Việt Nam — Triển lãm kỹ thuật số',
+    'Thành tựu xây dựng Chủ nghĩa Xã hội sau 40 năm Đổi mới tại Việt Nam',
   icons: {
     icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
   },

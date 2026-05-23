@@ -112,6 +112,9 @@ export const PRESENTATION_IMAGES: Record<number, string> = {
 
   24: `https://upload.wikimedia.org/wikipedia/commons/0/08/Ho_Chi_Minh_City_Skyline_at_Night.jpg`,
 
+  // XIV Congress 2026
+  25: "", // Placeholder for 2026 congress image
+
 }
 
 /**
@@ -144,6 +147,7 @@ export const PRESENTATION_CAPTIONS: Record<number, string> = {
   22: "",
   23: "",
   24: "",
+  25: "",
 }
 
 /** Căn ảnh trong khung khi dùng chế độ cover (mặc định dùng contain = không cắt) */
