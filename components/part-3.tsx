@@ -9,6 +9,7 @@ import {
 import { MediaBlock } from "@/components/media-block"
 import { Reveal, RevealStagger } from "@/components/reveal"
 import { TrendingUp } from "lucide-react"
+import { Part33Breakthrough } from "./part-3-3-breakthrough"
 
 const BREAKTHROUGHS = [
   { slot: 8 as const, title: "Thể chế", line: "Kinh tế thị trường thông thoáng, bình đẳng" },
@@ -80,63 +81,7 @@ export function Part3KinhTe() {
         }))}
       />
 
-      <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-8">
-        <h3 className="font-display text-3xl md:text-4xl font-bold text-on-surface">
-          3.3 · <span className="text-revolutionary-red">Bứt phá</span> quy mô
-        </h3>
-        <span className="font-label-mono text-monument-grey text-base md:text-lg uppercase font-semibold">
-          Bộ sưu tập ảnh kinh tế
-        </span>
-      </div>
-
-      <Reveal variant="fade-up" className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-10 items-stretch">
-        <div className="md:col-span-8">
-          <MediaBlock
-            imageSlot={9}
-            alt="Cảng biển"
-            aspect="galleryMain"
-            captionSize="large"
-            overlay={
-              <p className="font-display text-2xl md:text-3xl font-bold text-white">
-                Hội nhập chuỗi cung ứng toàn cầu
-              </p>
-            }
-          />
-        </div>
-        <div className="md:col-span-4 flex flex-col gap-4">
-          <MediaBlock
-            imageSlot={10}
-            alt="Công nghệ"
-            aspect="gallerySide"
-            className="flex-1"
-            captionSize="large"
-          />
-          <div className="bg-revolutionary-red p-6 flex flex-col justify-center shrink-0">
-            <TrendingUp className="w-10 h-10 text-white mb-2" />
-            <p className="font-display text-xl md:text-2xl font-bold text-white">
-              ~6,2%/năm · GDP ~510 tỷ USD
-            </p>
-            <p className="text-white/90 text-base md:text-lg mt-1">
-              Top 32 thế giới · Top 4 ASEAN
-            </p>
-          </div>
-        </div>
-      </Reveal>
-
-      <RevealStagger staggerMs={100} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-        <StatCard value="8,02%" label="GDP 2025 (dự kiến)" accent="red" />
-        <StatCard value="510 tỷ" label="USD" accent="gold" />
-        <StatCard value="CPTPP" label="EVFTA · RCEP" accent="gold" />
-        <StatCard value="FDI" label="Dịch chuyển cơ cấu" accent="grey" />
-      </RevealStagger>
-
-      <MediaBlock
-        imageSlot={11}
-        className="mb-8"
-        alt="Tầm nhìn 2030-2045"
-        aspect="wide"
-        captionSize="large"
-      />
+      <Part33Breakthrough />
 
       <SlideCardGrid
         items={[

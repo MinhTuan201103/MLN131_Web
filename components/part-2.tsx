@@ -6,12 +6,27 @@ import {
 import { EvidenceStatStrip, GdpTimelineChart, ReformFlowDiagram } from "@/components/data-visuals"
 import { RevealStagger } from "@/components/reveal"
 
-const LIMITATIONS = [
-  "Năng suất và cạnh tranh",
-  "Thể chế, môi trường đầu tư",
-  "Chênh lệch giàu nghèo",
-  "Môi trường, khí hậu",
-  "Thực thi chính sách",
+const LIMITATION_IMAGES = [
+  {
+    title: "Năng suất và cạnh tranh",
+    image: "https://tapchikinhtetaichinh.vn/stores/news_dataimages/kttc/2022/07/30/day-manh-nang-cao-nang-suat-chat-luong-de-tang-suc-canh-tranh-cho-doanh-nghiep-d203d63ec490.jpg",
+  },
+  {
+    title: "Thể chế, môi trường đầu tư",
+    image: "https://laodongthudo.vn/stores/news_dataimages/quocdai/042017/25/08/nam-2017-moi-truong-dau-tu-va-kinh-doanh-viet-nam-se-tiep-tuc-cai-thien-03-.7440.jpg",
+  },
+  {
+    title: "Chênh lệch giàu nghèo",
+    image: "https://file.thanhuyhanoi.vn/thanhuy/public/Uploads/TinTuc/2022/6/23/10019585/6fffeb5a-d295-43fd-b937-53d4a1212036.jpeg",
+  },
+  {
+    title: "Môi trường, khí hậu",
+    image: "https://tl.cdnchinhphu.vn/344445545208135680/2026/3/19/191-17738990498911232720683.jpg",
+  },
+  {
+    title: "Thực thi chính sách",
+    image: "https://kinhtevadubao.vn/stores/news_dataimages/vandl/102024/29/12/in_social/3529_csc_661744e950b5c.jpg?randTime=1778760035",
+  },
 ]
 
 export function Part2BoiCanh() {
@@ -38,23 +53,28 @@ export function Part2BoiCanh() {
       <h3 className="font-label-mono text-center text-golden-silk uppercase tracking-widest mb-6 text-lg md:text-xl font-semibold">
         Hạn chế hiện nay — Đại hội XIII
       </h3>
-      <RevealStagger staggerMs={90} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-8 items-stretch">
-        {LIMITATIONS.map((item, i) => (
+      <RevealStagger staggerMs={90} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8 items-stretch">
+        {LIMITATION_IMAGES.map((item, i) => (
           <div
             key={i}
-            className="p-4 bg-surface-container border border-monument-grey text-center h-full min-h-[88px] flex flex-col justify-center exhibition-card-hover"
+            className="flex flex-col gap-2 overflow-hidden rounded-2xl border border-monument-grey bg-surface-container shadow-md hover:shadow-lg transition-shadow"
           >
-            <span className="font-label-mono text-revolutionary-red text-lg font-bold">{i + 1}</span>
-            <p className="text-base md:text-lg text-on-surface mt-2 leading-snug">{item}</p>
+            <div className="aspect-square w-full overflow-hidden bg-surface-container-high">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <p className="text-center text-sm md:text-base text-on-surface font-semibold px-3 pb-3">
+              {item.title}
+            </p>
           </div>
         ))}
       </RevealStagger>
 
-      <blockquote className="border-l-4 border-revolutionary-red pl-6 text-lg md:text-xl text-on-surface-variant max-w-4xl">
-        <strong className="text-on-surface">Kết phần 2:</strong> Hạn chế không phủ nhận thành tựu
-        — quá độ còn dài, cần tiếp tục đổi mới theo định hướng xã hội chủ nghĩa.
-      </blockquote>
-      <div className="mt-4 flex flex-wrap gap-4">
+      <div className="mt-8 flex flex-wrap gap-4">
         <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-vi/dai-hoi-dai-bieu-toan-quoc-lan-thu-vi-cua-dang-19">
           Đại hội VI
         </SourceLink>
@@ -62,10 +82,7 @@ export function Part2BoiCanh() {
           Bộ Công Thương
         </SourceLink>
         <SourceLink href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=VN">
-          World Bank GDP/người
-        </SourceLink>
-        <SourceLink href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=VN">
-          World Bank GDP
+          Nguồn: World Bank
         </SourceLink>
         <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-xiii/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-dang-khoa-xii-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-xiii-cua-3734">
           Báo cáo Đại hội XIII
