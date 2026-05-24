@@ -31,6 +31,7 @@ const congressTimeline = [
     congress: "Đại hội VII",
     videoSlot: 1,
     imageSlot: 6,
+    customImage: "https://file3.qdnd.vn/data/images/0/2025/01/30/upload_2105/1.jpg",
     title: "Định hình đường lối",
     summary:
       "Đại hội VII thông qua Cương lĩnh 1991, xác định rõ hơn mô hình phát triển của Việt Nam.",
@@ -45,6 +46,7 @@ const congressTimeline = [
     congress: "Đại hội IX",
     videoSlot: 2,
     imageSlot: 11,
+    customImage: "https://cdn-images.vtv.vn/zoom/640_400/2020/6/6/dh9-1591457893186476988116.jpg",
     title: "Đẩy mạnh công nghiệp hóa",
     summary:
       "Đại hội IX nhấn mạnh công nghiệp hóa, hiện đại hóa và hội nhập để nâng tầm sức mạnh quốc gia.",
@@ -59,6 +61,7 @@ const congressTimeline = [
     congress: "Đại hội XI",
     videoSlot: 3,
     imageSlot: 18,
+    customImage: "https://bcp.cdnchinhphu.vn/Uploaded_VGP/nguyenductuan/20110112/Default%20Doan%20DB.jpg",
     title: "Phát triển bền vững",
     summary:
       "Đại hội XI tập trung đổi mới mô hình tăng trưởng, tái cơ cấu kinh tế và phát triển bền vững.",
@@ -73,6 +76,7 @@ const congressTimeline = [
     congress: "Đại hội XIII",
     videoSlot: 4,
     imageSlot: 24,
+    customImage: "https://bcp.cdnchinhphu.vn/Uploaded/nguyenxuanhong/2021_01_26/Khai%20mac2.jpg",
     title: "Kỷ nguyên vươn mình",
     summary:
       "Đại hội XIII đặt mục tiêu đến 2045, đưa Việt Nam trở thành nước phát triển, thu nhập cao.",
@@ -87,6 +91,7 @@ const congressTimeline = [
     congress: "Đại hội XIV",
     videoSlot: 5,
     imageSlot: 25,
+    customImage: "https://bcp.cdnchinhphu.vn/334894974524682240/2026/1/27/ra-mat-17695155355291301888613.jpg",
     title: "Tiếp tục phát triển",
     summary:
       "Đại hội XIV tiếp tục định hướng chiến lược phát triển, tập trung vào thực hiện mục tiêu đến năm 2030 và tầm nhìn 2045.",
@@ -99,8 +104,6 @@ const congressTimeline = [
 ]
 
 export function HeroSection() {
-  const [selectedCongress, setSelectedCongress] = useState<(typeof congressTimeline)[number] | null>(null)
-
   return (
     <>
       <section className="relative min-h-screen flex items-end overflow-hidden">
@@ -153,13 +156,11 @@ export function HeroSection() {
           <div className="timeline-wave absolute inset-0 z-[1] pointer-events-none" />
           <div className="timeline-marquee relative z-[2] flex items-stretch gap-6 px-4 md:px-6 py-4">
             {[...congressTimeline, ...congressTimeline].map((item, index) => {
-              const imageSrc = getPresentationImage(item.imageSlot)
+              const imageSrc = item.customImage || getPresentationImage(item.imageSlot)
 
               return (
-                <button
+                <div
                   key={`${item.year}-${index}`}
-                  type="button"
-                  onClick={() => setSelectedCongress(item)}
                   className="group relative min-w-[240px] w-[min(72vw,320px)] shrink-0 overflow-hidden rounded-[1.5rem] border border-monument-grey bg-white text-left shadow-[0_8px_30px_rgb(0_0_0_/_0.05)] transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-revolutionary-red/30"
                 >
                   <div className="relative aspect-[4/3] bg-surface-container-high">
@@ -184,122 +185,13 @@ export function HeroSection() {
                       <div className="mt-2 text-sm md:text-base font-semibold leading-snug">
                         {item.title}
                       </div>
-                      <div className="mt-3 text-xs uppercase tracking-[0.22em] text-white/85">
-                        Nhấn để xem chi tiết
-                      </div>
                     </div>
                   </div>
-                </button>
+                </div>
               )
             })}
           </div>
         </div>
-
-        <Dialog
-          open={selectedCongress !== null}
-          onOpenChange={(open) => {
-            if (!open) setSelectedCongress(null)
-          }}
-        >
-          {selectedCongress && (
-            <DialogContent className="!w-[min(92vw,1040px)] !max-w-[min(92vw,1040px)] !h-[min(86vh,840px)] !overflow-visible !p-0 !gap-0">
-              <div className="grid gap-0 grid-cols-1 lg:grid-cols-[1.3fr_1fr] items-stretch h-full min-h-0">
-                <div className="relative h-full min-h-0">
-                  {getPresentationVideo(selectedCongress.videoSlot) ? (
-                    <video
-                      src={getPresentationVideo(selectedCongress.videoSlot)}
-                      controls
-                      className="h-full w-full object-cover bg-black"
-                    />
-                  ) : getPresentationImage(selectedCongress.imageSlot) ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={getPresentationImage(selectedCongress.imageSlot)}
-                      alt={`${selectedCongress.congress} - ${selectedCongress.year}`}
-                      className="h-full w-full object-cover"
-                    />
-                  ) : (
-                    <div className="h-full w-full bg-surface-container-high" />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-3 md:p-4 text-white">
-                    <div className="font-label-mono text-[9px] uppercase tracking-[0.3em] text-golden-silk">
-                      {getPresentationVideo(selectedCongress.videoSlot) ? "Video" : "Ảnh"} - Kỳ đại hội
-                    </div>
-                    <div className="mt-1 font-display text-xl md:text-2xl font-black leading-none">
-                      {selectedCongress.year}
-                    </div>
-                    <div className="mt-1 text-sm md:text-sm font-semibold">
-                      {selectedCongress.title}
-                    </div>
-                  </div>
-                </div>
-                <div className="p-3 md:p-4 h-full overflow-visible flex flex-col justify-between min-w-0">
-                  <DialogHeader className="text-left">
-                    <DialogTitle className="font-display text-xl md:text-2xl font-black text-on-surface">
-                      {selectedCongress.congress}
-                    </DialogTitle>
-                    <DialogDescription className="text-sm text-on-surface-variant max-w-full">
-                      Bảng thông tin tóm tắt về kỳ đại hội và các nội dung chính.
-                    </DialogDescription>
-                  </DialogHeader>
-
-                  <div className="mt-6 flex-1 flex flex-col gap-4 overflow-visible">
-                    <div className="rounded-2xl border border-monument-grey bg-surface-container shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] p-4 overflow-visible">
-                      <div className="mb-4 border-b border-monument-grey pb-2 font-label-mono text-sm uppercase tracking-[0.28em] text-revolutionary-red">
-                        Bảng chi tiết đại hội
-                      </div>
-
-                      <div className="grid gap-2 lg:grid-cols-[1fr_1fr]">
-                        <div className="grid gap-2">
-                          <div className="rounded-2xl border border-monument-grey bg-surface-container-high p-2">
-                            <div className="font-label-mono text-[9px] uppercase tracking-[0.24em] text-on-surface-variant mb-1">
-                              Thông tin chính
-                            </div>
-                            <div className="space-y-1 text-[11px] md:text-xs text-on-surface-variant">
-                              <div>
-                                <div className="font-semibold text-on-surface text-xs">Kỳ đại hội</div>
-                                <div className="text-xs md:text-sm">{selectedCongress.congress}</div>
-                              </div>
-                              <div>
-                                <div className="font-semibold text-on-surface text-xs">Năm</div>
-                                <div className="text-xs md:text-sm">{selectedCongress.year}</div>
-                              </div>
-                              <div>
-                                <div className="font-semibold text-on-surface text-xs">Chủ đề</div>
-                                <div className="text-xs md:text-sm">{selectedCongress.title}</div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="rounded-2xl border border-monument-grey bg-surface-container-high p-2">
-                            <div className="font-label-mono text-[9px] uppercase tracking-[0.24em] text-on-surface-variant mb-1">
-                              Tóm tắt
-                            </div>
-                            <p className="text-xs md:text-sm leading-snug text-on-surface-variant">
-                              {selectedCongress.summary}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="rounded-2xl border border-monument-grey bg-surface-container-high p-2">
-                          <div className="font-label-mono text-[9px] uppercase tracking-[0.24em] text-on-surface-variant mb-1">
-                            Ý chính
-                          </div>
-                          <ul className="list-decimal list-inside space-y-1 text-xs md:text-sm text-on-surface-variant">
-                            {selectedCongress.highlights.map((point, index) => (
-                              <li key={index} className="leading-snug">{point}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </DialogContent>
-          )}
-        </Dialog>
       </section>
     </>
   )
