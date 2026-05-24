@@ -206,22 +206,22 @@ export function Part5QuocPhongChinhTri() {
             <tbody className="divide-y divide-monument-grey">
               <tr className="bg-white hover:bg-amber-50 transition-colors duration-300">
                   <td className="px-4 py-4 font-bold text-on-surface">Bộ máy</td>
-                  <td className="px-4 py-4 text-on-surface-variant opacity-60">Cồng kềnh, bao cấp</td>
+                  <td className="px-4 py-4 text-on-surface">Cồng kềnh, bao cấp</td>
                   <td className="px-4 py-4 font-bold text-revolutionary-red">Tinh gọn, Chính phủ số</td>
               </tr>
               <tr className="bg-gray-50 hover:bg-amber-50 transition-colors duration-300">
                   <td className="px-4 py-4 font-bold text-on-surface">Tiêu cực</td>
-                  <td className="px-4 py-4 text-on-surface-variant opacity-60">Xử lý nội bộ</td>
+                  <td className="px-4 py-4 text-on-surface">Xử lý nội bộ</td>
                   <td className="px-4 py-4 font-bold text-revolutionary-red">Không vùng cấm (CPI ↑)</td>
               </tr>
               <tr className="bg-white hover:bg-amber-50 transition-colors duration-300">
                   <td className="px-4 py-4 font-bold text-on-surface">Đối ngoại</td>
-                  <td className="px-4 py-4 text-on-surface-variant opacity-60">Bao vây, cấm vận</td>
+                  <td className="px-4 py-4 text-on-surface">Bao vây, cấm vận</td>
                   <td className="px-4 py-4 font-bold text-revolutionary-red">193 nước, 16 FTA</td>
               </tr>
               <tr className="bg-gray-50 hover:bg-amber-50 transition-colors duration-300">
                   <td className="px-4 py-4 font-bold text-on-surface">Quốc phòng</td>
-                  <td className="px-4 py-4 text-on-surface-variant opacity-60">Phòng thủ thụ động</td>
+                  <td className="px-4 py-4 text-on-surface">Phòng thủ thụ động</td>
                   <td className="px-4 py-4 font-bold text-revolutionary-red">Chủ động từ sớm, từ xa</td>
               </tr>
             </tbody>

@@ -21,7 +21,7 @@ export function Part4VanHoaXaHoi() {
           <span className="font-display text-3xl md:text-4xl text-revolutionary-red font-black">→</span>
           <span className="font-display text-2xl md:text-3xl font-bold text-revolutionary-red">2026</span>
         </div>
-        <p className="font-label-mono text-monument-grey text-base md:text-lg mt-4 italic">
+        <p className="font-label-mono text-on-surface text-base md:text-lg mt-4 italic">
           "Con người là trung tâm, chủ thể, nguồn lực quan trọng nhất của sự phát triển"
         </p>
       </div>
@@ -52,7 +52,7 @@ export function Part4VanHoaXaHoi() {
                   </h4>
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="bg-gray-100 rounded p-2">
-                      <p className="font-bold text-monument-grey">1986</p>
+                      <p className="font-bold text-on-surface">1986</p>
                       <p className="text-on-surface text-xs mt-1">Khép kín, bảo vệ tự thân</p>
                     </div>
                     <div className="bg-revolutionary-red/10 rounded p-2">
@@ -74,7 +74,7 @@ export function Part4VanHoaXaHoi() {
                   </h4>
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="bg-gray-100 rounded p-2">
-                      <p className="font-bold text-monument-grey">1986</p>
+                      <p className="font-bold text-on-surface">1986</p>
                       <p className="text-on-surface text-xs mt-1">Giải quyết tư tưởng</p>
                     </div>
                     <div className="bg-revolutionary-red/10 rounded p-2">
@@ -96,7 +96,7 @@ export function Part4VanHoaXaHoi() {
                   </h4>
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="bg-gray-100 rounded p-2">
-                      <p className="font-bold text-monument-grey">1986</p>
+                      <p className="font-bold text-on-surface">1986</p>
                       <p className="text-on-surface text-xs mt-1">Mục tiêu tuyên truyền</p>
                     </div>
                     <div className="bg-revolutionary-red/10 rounded p-2">
@@ -134,7 +134,7 @@ export function Part4VanHoaXaHoi() {
               <p className="font-label-mono text-xs uppercase font-bold text-on-surface-variant mb-2">
                 Tuổi thọ
               </p>
-              <div className="text-xs space-y-1 text-monument-grey">
+              <div className="text-xs space-y-1 text-on-surface">
                 <div>1986: 65 tuổi</div>
                 <div className="text-revolutionary-red font-bold">+9.8 năm</div>
               </div>
@@ -151,7 +151,7 @@ export function Part4VanHoaXaHoi() {
               <p className="font-label-mono text-xs uppercase font-bold text-on-surface-variant mb-2">
                 Bảo hiểm Y tế
               </p>
-              <div className="text-xs space-y-1 text-monument-grey">
+              <div className="text-xs space-y-1 text-on-surface">
                 <div>1986: Chưa có</div>
                 <div className="text-revolutionary-red font-bold">Phủ sóng toàn dân</div>
               </div>
@@ -168,7 +168,7 @@ export function Part4VanHoaXaHoi() {
               <p className="font-label-mono text-xs uppercase font-bold text-on-surface-variant mb-2">
                 Tỷ lệ Nghèo
               </p>
-              <div className="text-xs space-y-1 text-monument-grey">
+              <div className="text-xs space-y-1 text-on-surface">
                 <div>1986: &gt;60%</div>
                 <div className="text-revolutionary-red font-bold">Giảm 98.3%</div>
               </div>
@@ -185,7 +185,7 @@ export function Part4VanHoaXaHoi() {
               <p className="font-label-mono text-xs uppercase font-bold text-on-surface-variant mb-2">
                 Chỉ số HDI
               </p>
-              <div className="text-xs space-y-1 text-monument-grey">
+              <div className="text-xs space-y-1 text-on-surface">
                 <div>1986: Thấp</div>
                 <div className="text-revolutionary-red font-bold">Nhóm CAO Toàn cầu</div>
               </div>
@@ -211,7 +211,7 @@ export function Part4VanHoaXaHoi() {
               </div>
               <h4 className="font-display text-xl font-bold text-on-surface mb-2">{item.title}</h4>
               <p className="text-sm font-semibold text-golden-silk mb-2">{item.stat}</p>
-              <p className="text-xs text-monument-grey">{item.desc}</p>
+              <p className="text-xs text-on-surface">{item.desc}</p>
             </div>
           ))}
         </div>

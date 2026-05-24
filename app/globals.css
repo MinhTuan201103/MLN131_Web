@@ -150,6 +150,18 @@
   letter-spacing: 0.06em;
 }
 
+.text-monument-grey,
+.text-muted-foreground,
+.text-on-surface-variant {
+  color: var(--on-surface) !important;
+}
+
+.opacity-60,
+.opacity-50,
+.opacity-40 {
+  opacity: 1 !important;
+}
+
 .grain-overlay {
   background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCbdPVy-upZuuzVI94OL64N1uE60NCoI-qHPzlJPhNEtpok-wERXxaVLsieTDoWFBnTas7irtTOmb_jjKKuG-HMWD-CTylITeRNeNyIFs7l2NJcFSS6CI3OjO_1h5cvHh483cM26GHOhCGBVHSHCa6uvJMgtk4CKWnukxdFd1DKYiukCJ-bXV0s2gnjML7OJ6MQitTEGS7W4MsmnhfM3GyD65ZUSGvszUgfcuAYmJb7C9wezDkqkg_jydi-XYp3axn2S_ptkRk9eAYY);
   opacity: 0.05;
