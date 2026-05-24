@@ -27,7 +27,7 @@ export function NumberCounter({
 }: NumberCounterProps) {
   const [count, setCount] = useState(startValue)
   const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLSpanElement>(null)
 
   // Intersection Observer - trigger khi vào viewport
   useEffect(() => {
@@ -78,10 +78,10 @@ export function NumberCounter({
   }, [isVisible, startValue, endValue, duration, onComplete])
 
   return (
-    <div ref={ref} className={className}>
+    <span ref={ref} className={className}>
       {prefix}
       {count.toLocaleString('vi-VN')}
       {suffix}
-    </div>
+    </span>
   )
 }
