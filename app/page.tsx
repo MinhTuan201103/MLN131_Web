@@ -6,7 +6,6 @@ import { Part3KinhTe } from "@/components/part-3"
 import { Part4VanHoaXaHoi } from "@/components/part-4"
 import { Part5QuocPhongChinhTri } from "@/components/part-5"
 import { Part6KetLuan } from "@/components/part-6"
-import { ConclusionSection } from "@/components/conclusion"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
           <Part4VanHoaXaHoi />
           <Part5QuocPhongChinhTri />
           <Part6KetLuan />
-          <ConclusionSection />
         </main>
         <Footer />
       </div>

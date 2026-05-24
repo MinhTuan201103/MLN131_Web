@@ -3,7 +3,7 @@
 import { SectionWrap } from "@/components/content-card"
 import { Reveal, RevealStagger } from "@/components/reveal"
 import { NumberCounter } from "@/components/number-counter"
-import { Users, Globe, Shield, Zap, Lock, Award } from 'lucide-react'
+import { Users, Globe, Shield, Zap, Lock } from 'lucide-react'
 
 export function Part5QuocPhongChinhTri() {
   return (
@@ -30,16 +30,16 @@ export function Part5QuocPhongChinhTri() {
           Nền tảng ổn định
         </p>
 
-        <RevealStagger staggerMs={120} className="grid md:grid-cols-3 gap-6 mb-8" variant="fade-up">
+        <RevealStagger staggerMs={120} className="grid md:grid-cols-3 gap-6 mb-8 items-stretch" variant="fade-up">
           {/* Card 1 */}
-          <div className="rounded-2xl border-2 border-monument-grey bg-blue-50 p-6 hover:shadow-xl hover:translate-y-[-4px] transition-all duration-500 ease-out group">
+          <div className="h-full flex flex-col rounded-2xl border-2 border-monument-grey bg-blue-50 p-6 hover:shadow-xl hover:translate-y-[-4px] transition-all duration-500 ease-out group">
             <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
               <Users className="w-12 h-12 text-revolutionary-red" />
             </div>
             <p className="font-display text-2xl md:text-3xl font-black text-on-surface mb-4 text-center">
               LÝ LUẬN
             </p>
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-2 mt-auto">
               <p className="font-semibold text-lg text-on-surface">Kinh tế ↔ Chính trị</p>
               <p className="text-sm text-on-surface-variant">Dân chủ XHCN</p>
               <p className="text-sm text-on-surface-variant">Lãnh đạo duy nhất của Đảng</p>
@@ -47,14 +47,14 @@ export function Part5QuocPhongChinhTri() {
           </div>
 
           {/* Card 2 */}
-          <div className="rounded-2xl border-2 border-monument-grey bg-red-50 p-6 hover:shadow-xl hover:translate-y-[-4px] transition-all duration-500 ease-out group">
+          <div className="h-full flex flex-col rounded-2xl border-2 border-monument-grey bg-red-50 p-6 hover:shadow-xl hover:translate-y-[-4px] transition-all duration-500 ease-out group">
             <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
               <Lock className="w-12 h-12 text-revolutionary-red" />
             </div>
             <p className="font-display text-2xl md:text-3xl font-black text-on-surface mb-4 text-center">
               CHỐNG THAM NHŨNG
             </p>
-            <div className="text-center space-y-3">
+            <div className="text-center space-y-3 mt-auto">
               <p className="font-display text-3xl md:text-4xl font-black text-revolutionary-red">
                 <NumberCounter endValue={113} suffix=" → 83" duration={1500} />
               </p>
@@ -65,14 +65,14 @@ export function Part5QuocPhongChinhTri() {
           </div>
 
           {/* Card 3 */}
-          <div className="rounded-2xl border-2 border-monument-grey bg-green-50 p-6 hover:shadow-xl hover:translate-y-[-4px] transition-all duration-500 ease-out group">
+          <div className="h-full flex flex-col rounded-2xl border-2 border-monument-grey bg-green-50 p-6 hover:shadow-xl hover:translate-y-[-4px] transition-all duration-500 ease-out group">
             <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
               <Zap className="w-12 h-12 text-revolutionary-red" />
             </div>
             <p className="font-display text-2xl md:text-3xl font-black text-on-surface mb-4 text-center">
               TINH GỌN
             </p>
-            <div className="text-center space-y-3">
+            <div className="text-center space-y-3 mt-auto">
               <p className="font-display text-3xl md:text-4xl font-black text-revolutionary-red">
                 $<NumberCounter endValue={510} suffix=" Tỷ USD" duration={1500} />
               </p>
@@ -190,7 +190,12 @@ export function Part5QuocPhongChinhTri() {
         </h2>
 
         <div className="overflow-x-auto rounded-2xl border-2 border-monument-grey shadow-lg">
-          <table className="w-full text-base md:text-lg">
+          <table className="w-full min-w-[760px] table-fixed text-base md:text-lg">
+            <colgroup>
+              <col className="w-[22%]" />
+              <col className="w-[34%]" />
+              <col className="w-[44%]" />
+            </colgroup>
             <thead>
               <tr className="bg-revolutionary-red text-white">
                 <th className="px-4 py-4 text-left font-display font-black">Tiêu Chí</th>
@@ -199,106 +204,31 @@ export function Part5QuocPhongChinhTri() {
               </tr>
             </thead>
             <tbody className="divide-y divide-monument-grey">
-              <Reveal delay={0} variant="fade-up">
-                <tr className="bg-white hover:bg-amber-50 transition-colors duration-300">
+              <tr className="bg-white hover:bg-amber-50 transition-colors duration-300">
                   <td className="px-4 py-4 font-bold text-on-surface">Bộ máy</td>
                   <td className="px-4 py-4 text-on-surface-variant opacity-60">Cồng kềnh, bao cấp</td>
                   <td className="px-4 py-4 font-bold text-revolutionary-red">Tinh gọn, Chính phủ số</td>
-                </tr>
-              </Reveal>
-              <Reveal delay={80} variant="fade-up">
-                <tr className="bg-gray-50 hover:bg-amber-50 transition-colors duration-300">
+              </tr>
+              <tr className="bg-gray-50 hover:bg-amber-50 transition-colors duration-300">
                   <td className="px-4 py-4 font-bold text-on-surface">Tiêu cực</td>
                   <td className="px-4 py-4 text-on-surface-variant opacity-60">Xử lý nội bộ</td>
                   <td className="px-4 py-4 font-bold text-revolutionary-red">Không vùng cấm (CPI ↑)</td>
-                </tr>
-              </Reveal>
-              <Reveal delay={160} variant="fade-up">
-                <tr className="bg-white hover:bg-amber-50 transition-colors duration-300">
+              </tr>
+              <tr className="bg-white hover:bg-amber-50 transition-colors duration-300">
                   <td className="px-4 py-4 font-bold text-on-surface">Đối ngoại</td>
                   <td className="px-4 py-4 text-on-surface-variant opacity-60">Bao vây, cấm vận</td>
                   <td className="px-4 py-4 font-bold text-revolutionary-red">193 nước, 16 FTA</td>
-                </tr>
-              </Reveal>
-              <Reveal delay={240} variant="fade-up">
-                <tr className="bg-gray-50 hover:bg-amber-50 transition-colors duration-300">
+              </tr>
+              <tr className="bg-gray-50 hover:bg-amber-50 transition-colors duration-300">
                   <td className="px-4 py-4 font-bold text-on-surface">Quốc phòng</td>
                   <td className="px-4 py-4 text-on-surface-variant opacity-60">Phòng thủ thụ động</td>
                   <td className="px-4 py-4 font-bold text-revolutionary-red">Chủ động từ sớm, từ xa</td>
-                </tr>
-              </Reveal>
+              </tr>
             </tbody>
           </table>
         </div>
       </Reveal>
 
-      {/* KHỐI 4: TIMELINE 2030-2045 */}
-      <Reveal variant="fade-up" duration={800}>
-        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-left">
-          TẦM NHÌN CHIẾN LƯỢC
-        </h2>
-        <p className="text-left text-golden-silk font-bold text-lg mb-10 uppercase">
-          2030 - 2045
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* 2030 */}
-          <Reveal variant="fade-left" duration={900}>
-            <div className="rounded-2xl border-3 border-golden-silk bg-gradient-to-br from-yellow-50 to-orange-50 p-8 group hover:shadow-xl hover:translate-y-[-4px] transition-all duration-500">
-              <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2">
-                2030
-              </h3>
-              <p className="font-label-mono text-golden-silk uppercase tracking-widest text-lg font-bold mb-8">
-                100 Năm Lập Đảng
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Award className="w-8 h-8 text-golden-silk flex-shrink-0 mt-1 animate-bounce" style={{ animationDelay: '0s' }} />
-                  <div>
-                    <p className="font-display text-2xl font-black text-on-surface">Ổn định chính trị</p>
-                    <p className="text-sm text-on-surface-variant">Tuyệt đối, thế trận lòng dân vững</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Award className="w-8 h-8 text-golden-silk flex-shrink-0 mt-1 animate-bounce" style={{ animationDelay: '0.1s' }} />
-                  <div>
-                    <p className="font-display text-2xl font-black text-on-surface">Nước Đang Phát Triển</p>
-                    <p className="text-sm text-on-surface-variant">Công nghiệp hiện đại, thu nhập cao</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
-          {/* 2045 */}
-          <Reveal variant="fade-right" duration={900}>
-            <div className="rounded-2xl border-3 border-revolutionary-red bg-gradient-to-br from-red-50 to-orange-50 p-8 group hover:shadow-xl hover:translate-y-[-4px] transition-all duration-500">
-              <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2">
-                2045
-              </h3>
-              <p className="font-label-mono text-revolutionary-red uppercase tracking-widest text-lg font-bold mb-8">
-                100 Năm Lập Nước
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Award className="w-8 h-8 text-revolutionary-red flex-shrink-0 mt-1 animate-bounce" style={{ animationDelay: '0s' }} />
-                  <div>
-                    <p className="font-display text-2xl font-black text-on-surface">Nhà Nước Pháp Quyền XHCN</p>
-                    <p className="text-sm text-on-surface-variant">Hiện đại, nhân dân, minh bạch</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Award className="w-8 h-8 text-revolutionary-red flex-shrink-0 mt-1 animate-bounce" style={{ animationDelay: '0.1s' }} />
-                  <div>
-                    <p className="font-display text-2xl font-black text-on-surface">Nước Phát Triển</p>
-                    <p className="text-sm text-on-surface-variant">Thu nhập cao, con người hạnh phúc</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </Reveal>
     </SectionWrap>
   )
 }

@@ -283,36 +283,19 @@ export function Part6KetLuan() {
             </h3>
           </div>
 
-          <div className="space-y-4 text-on-surface leading-relaxed">
+          <div className="text-on-surface leading-relaxed">
             <p className="text-base md:text-lg">
-              Nhìn lại hành trình <span className="font-bold text-revolutionary-red">40 năm Đổi mới (1986 - 2026)</span>, từ một quốc gia kiệt quệ bởi chiến tranh và cấm vận, <span className="font-bold">Việt Nam đã vươn mình</span> trở thành một nền kinh tế năng động, hội nhập sâu rộng và có uy tín lớn trên trường quốc tế.
+              Hành trình 40 năm Đổi mới (1986 - 2026) đã biến Việt Nam từ một nước kiệt quệ thành nền kinh tế năng động và uy tín quốc tế. Những thành tựu toàn diện này khẳng định con đường đi lên Chủ nghĩa xã hội là đúng đắn. Bước vào &quot;Kỷ nguyên vươn mình&quot;, với nền tảng vững chắc và thế hệ trẻ tri thức, Việt Nam tự tin hiện thực hóa khát vọng phát triển dân tộc.
             </p>
-
-            <p className="text-base md:text-lg">
-              Dù chặng đường phía trước còn nhiều <span className="font-bold">"điểm nghẽn" và thách thức</span>, nhưng những thành tựu toàn diện về kinh tế, văn hóa, xã hội và quốc phòng đã chứng minh: <span className="text-golden-silk font-bold">Việc lựa chọn con đường đi lên Chủ nghĩa xã hội của Việt Nam là hoàn toàn đúng đắn</span>.
-            </p>
-
-            <p className="text-base md:text-lg">
-              Tiến vào <span className="font-bold text-golden-silk">"Kỷ Nguyên Vươn Mình"</span>, với nền tảng tư tưởng vững chắc, sự lãnh đạo sáng suốt của Đảng và sự xung kích của thế hệ trẻ tri thức, <span className="font-bold">Việt Nam hoàn toàn có đủ cơ sở và niềm tin</span> để hiện thực hóa khát vọng dân tộc.
-            </p>
-
-            <div className="bg-white/60 backdrop-blur rounded-xl border-2 border-golden-silk p-4 md:p-6 mt-6">
-              <p className="font-display text-2xl md:text-3xl font-black text-revolutionary-red text-center">
-                Trở Thành Quốc Gia Phát Triển, Thu Nhập Cao
-              </p>
-              <p className="text-center text-golden-silk font-bold mt-2">
-                Mang Lại Cuộc Sống Phồn Vinh, Hạnh Phúc Cho Nhân Dân Vào Năm 2045
-              </p>
-            </div>
           </div>
         </div>
       </Reveal>
 
       {/* CLOSING IMAGE */}
       <Reveal variant="fade-up" duration={900} delay={200} className="px-4 sm:px-8 lg:px-20 mb-8">
-        <div className="rounded-3xl overflow-hidden border-3 border-monument-grey h-80 md:h-96 group">
+        <div className="rounded-3xl overflow-hidden border-3 border-monument-grey h-[420px] md:h-[560px] group">
           <img
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
+            src="https://thinhvuongvietnam.com/Content/UploadFiles/Thumb/2025/Quy1/a25032025110728.jpg"
             alt="Kỷ nguyên vươn mình"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />

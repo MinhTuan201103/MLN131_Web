@@ -1,105 +1,69 @@
 "use client"
 
 import { getPresentationImage } from "@/lib/presentation-images"
-import { getPresentationVideo } from "@/lib/presentation-videos"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog"
-import { useState } from "react"
 
 const congressTimeline = [
   {
     year: "1986",
-    congress: "Đại hội VI",
-    videoSlot: 0,
+    congress: "VI",
     imageSlot: 3,
-    title: "Khởi xướng Đổi mới",
-    summary:
-      "Đại hội VI mở ra bước ngoặt lịch sử, chuyển nền kinh tế từ cơ chế bao cấp sang đổi mới toàn diện.",
-    highlights: [
-      "Xóa bỏ dần cơ chế quản lý tập trung quan liêu bao cấp",
-      "Khẳng định yêu cầu đổi mới tư duy và đổi mới kinh tế",
-      "Tạo nền tảng cho tiến trình phát triển về sau",
-    ],
+    title: "Khởi xướng công cuộc Đổi mới",
   },
   {
     year: "1991",
-    congress: "Đại hội VII",
-    videoSlot: 1,
+    congress: "VII",
     imageSlot: 6,
     customImage: "https://file3.qdnd.vn/data/images/0/2025/01/30/upload_2105/1.jpg",
-    title: "Định hình đường lối",
-    summary:
-      "Đại hội VII thông qua Cương lĩnh 1991, xác định rõ hơn mô hình phát triển của Việt Nam.",
-    highlights: [
-      "Xác lập Cương lĩnh xây dựng đất nước trong thời kỳ quá độ",
-      "Củng cố mô hình kinh tế thị trường định hướng XHCN",
-      "Giữ ổn định chính trị để phát triển lâu dài",
-    ],
+    title: "Thông qua Cương lĩnh 1991",
+  },
+  {
+    year: "1996",
+    congress: "VIII",
+    imageSlot: 2,
+    customImage: "https://media-dienbien.baodienbienphu.vn/637473370346304492_2025-02-09-37.jpg",
+    title: "Đẩy mạnh công nghiệp hóa",
   },
   {
     year: "2001",
-    congress: "Đại hội IX",
-    videoSlot: 2,
+    congress: "IX",
     imageSlot: 11,
     customImage: "https://cdn-images.vtv.vn/zoom/640_400/2020/6/6/dh9-1591457893186476988116.jpg",
-    title: "Đẩy mạnh công nghiệp hóa",
-    summary:
-      "Đại hội IX nhấn mạnh công nghiệp hóa, hiện đại hóa và hội nhập để nâng tầm sức mạnh quốc gia.",
-    highlights: [
-      "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
-      "Mở rộng hội nhập kinh tế quốc tế",
-      "Tăng cường sức cạnh tranh của nền kinh tế",
-    ],
+    title: "Công nghiệp hóa - hiện đại hóa",
+  },
+  {
+    year: "2006",
+    congress: "X",
+    imageSlot: 11,
+    customImage: "https://file3.qdnd.vn/data/images/0/2025/02/04/upload_2081/dhx.jpg?dpi=150&quality=100&w=870",
+    title: "Chủ động hội nhập quốc tế",
   },
   {
     year: "2011",
-    congress: "Đại hội XI",
-    videoSlot: 3,
+    congress: "XI",
     imageSlot: 18,
     customImage: "https://bcp.cdnchinhphu.vn/Uploaded_VGP/nguyenductuan/20110112/Default%20Doan%20DB.jpg",
     title: "Phát triển bền vững",
-    summary:
-      "Đại hội XI tập trung đổi mới mô hình tăng trưởng, tái cơ cấu kinh tế và phát triển bền vững.",
-    highlights: [
-      "Đổi mới mô hình tăng trưởng, nâng cao chất lượng",
-      "Gắn phát triển kinh tế với an sinh xã hội",
-      "Tạo động lực cho giai đoạn hội nhập sâu rộng",
-    ],
+  },
+  {
+    year: "2016",
+    congress: "XII",
+    imageSlot: 18,
+    customImage: "https://vwu.vn/documents/20182/1823217/small_8953.jpg/b01b8f98-ef6a-4bbb-b6b5-1439f8abbe0a",
+    title: "Tăng cường xây dựng, chỉnh đốn Đảng",
   },
   {
     year: "2021",
-    congress: "Đại hội XIII",
-    videoSlot: 4,
+    congress: "XIII",
     imageSlot: 24,
     customImage: "https://bcp.cdnchinhphu.vn/Uploaded/nguyenxuanhong/2021_01_26/Khai%20mac2.jpg",
-    title: "Kỷ nguyên vươn mình",
-    summary:
-      "Đại hội XIII đặt mục tiêu đến 2045, đưa Việt Nam trở thành nước phát triển, thu nhập cao.",
-    highlights: [
-      "Xác lập khát vọng phát triển đến 2030 và 2045",
-      "Đẩy mạnh chuyển đổi số, đổi mới sáng tạo",
-      "Xây dựng đất nước hùng cường, hiện đại",
-    ],
+    title: "Khát vọng phát triển đất nước",
   },
   {
     year: "2026",
-    congress: "Đại hội XIV",
-    videoSlot: 5,
+    congress: "XIV",
     imageSlot: 25,
     customImage: "https://bcp.cdnchinhphu.vn/334894974524682240/2026/1/27/ra-mat-17695155355291301888613.jpg",
-    title: "Tiếp tục phát triển",
-    summary:
-      "Đại hội XIV tiếp tục định hướng chiến lược phát triển, tập trung vào thực hiện mục tiêu đến năm 2030 và tầm nhìn 2045.",
-    highlights: [
-      "Tiếp tục thực hiện mục tiêu nâng cao chất lượng, hiệu quả phát triển",
-      "Tạo động lực mới cho phát triển bền vững",
-      "Xây dựng nước mạnh, dân giàu, xã hội công bằng, dân chủ, văn minh",
-    ],
+    title: "Kỷ nguyên vươn mình của dân tộc",
   },
 ]
 
@@ -161,7 +125,7 @@ export function HeroSection() {
               return (
                 <div
                   key={`${item.year}-${index}`}
-                  className="group relative min-w-[240px] w-[min(72vw,320px)] shrink-0 overflow-hidden rounded-[1.5rem] border border-monument-grey bg-white text-left shadow-[0_8px_30px_rgb(0_0_0_/_0.05)] transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-revolutionary-red/30"
+                  className="timeline-card group relative min-w-[240px] w-[min(72vw,320px)] shrink-0 overflow-hidden rounded-[1.5rem] border border-monument-grey bg-white text-left shadow-[0_8px_30px_rgb(0_0_0_/_0.05)] transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-revolutionary-red/30"
                 >
                   <div className="relative aspect-[4/3] bg-surface-container-high">
                     {imageSrc ? (
@@ -182,7 +146,7 @@ export function HeroSection() {
                       <div className="mt-1 font-display text-3xl md:text-4xl font-black leading-none">
                         {item.year}
                       </div>
-                      <div className="mt-2 text-sm md:text-base font-semibold leading-snug">
+                      <div className="mt-2 min-h-[3.5rem] whitespace-normal break-words text-sm md:text-base font-semibold leading-snug">
                         {item.title}
                       </div>
                     </div>

@@ -300,7 +300,7 @@ export function SectionWrap({
   }[variant]
 
   return (
-    <section id={id} className={cn("py-16 md:py-section-gap", bg, className)}>
+    <section id={id} className={cn("exhibition-section py-16 md:py-section-gap", bg, className)}>
       <div className="exhibition-container">
         <Reveal variant="fade-up" duration={850}>
           {children}

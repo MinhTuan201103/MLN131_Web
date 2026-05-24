@@ -18,8 +18,7 @@ export function ConclusionSection() {
         />
 
         <p className="text-xl md:text-2xl text-on-surface-variant mb-10 leading-relaxed">
-          Thành tựu không chỉ kinh tế mà cả văn hóa — xã hội: minh chứng mô hình hướng tới hạnh phúc
-          và phát triển toàn diện con người.
+          Hành trình 40 năm Đổi mới (1986 - 2026) đã biến Việt Nam từ một nước kiệt quệ thành nền kinh tế năng động và uy tín quốc tế. Những thành tựu toàn diện này khẳng định con đường đi lên Chủ nghĩa xã hội là đúng đắn. Bước vào &quot;Kỷ nguyên vươn mình&quot;, với nền tảng vững chắc và thế hệ trẻ tri thức, Việt Nam tự tin hiện thực hóa khát vọng phát triển dân tộc.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">

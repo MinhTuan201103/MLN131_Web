@@ -57,9 +57,9 @@ export function Part2BoiCanh() {
         {LIMITATION_IMAGES.map((item, i) => (
           <div
             key={i}
-            className="flex flex-col gap-2 overflow-hidden rounded-2xl border border-monument-grey bg-surface-container shadow-md hover:shadow-lg transition-shadow"
+            className="flex h-full min-h-[300px] flex-col overflow-hidden rounded-2xl border border-monument-grey bg-surface-container shadow-md hover:shadow-lg transition-shadow"
           >
-            <div className="aspect-square w-full overflow-hidden bg-surface-container-high">
+            <div className="aspect-[4/3] w-full overflow-hidden bg-surface-container-high">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={item.image}
@@ -67,26 +67,31 @@ export function Part2BoiCanh() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <p className="text-center text-sm md:text-base text-on-surface font-semibold px-3 pb-3">
+            <p className="flex min-h-[4.75rem] flex-1 items-center justify-center px-3 py-3 text-center text-sm md:text-base text-on-surface font-semibold leading-snug">
               {item.title}
             </p>
           </div>
         ))}
       </RevealStagger>
 
-      <div className="mt-8 flex flex-wrap gap-4">
-        <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-vi/dai-hoi-dai-bieu-toan-quoc-lan-thu-vi-cua-dang-19">
-          Đại hội VI
-        </SourceLink>
-        <SourceLink href="https://moit.gov.vn/gioi-thieu/cac-thoi-ky-phat-trien/giai-doan-1975-1985.html">
-          Bộ Công Thương
-        </SourceLink>
-        <SourceLink href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=VN">
-          Nguồn: World Bank
-        </SourceLink>
-        <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-xiii/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-dang-khoa-xii-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-xiii-cua-3734">
-          Báo cáo Đại hội XIII
-        </SourceLink>
+      <div className="mt-8 rounded-2xl border border-monument-grey bg-surface-container px-5 py-4 shadow-sm">
+        <p className="mb-3 font-label-mono text-sm uppercase tracking-[0.24em] text-revolutionary-red">
+          Nguồn tham khảo
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-vi/dai-hoi-dai-bieu-toan-quoc-lan-thu-vi-cua-dang-19">
+            Đại hội VI
+          </SourceLink>
+          <SourceLink href="https://moit.gov.vn/gioi-thieu/cac-thoi-ky-phat-trien/giai-doan-1975-1985.html">
+            Bộ Công Thương
+          </SourceLink>
+          <SourceLink href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=VN">
+            World Bank
+          </SourceLink>
+          <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-xiii/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-dang-khoa-xii-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-xiii-cua-3734">
+            Báo cáo Đại hội XIII
+          </SourceLink>
+        </div>
       </div>
     </SectionWrap>
   )
