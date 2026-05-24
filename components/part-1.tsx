@@ -128,7 +128,7 @@ const TRANSITION_ELEMENTS = [
       "Kinh tế thị trường định hướng XHCN",
       "Giải phóng lực lượng sản xuất",
     ],
-    image: "https://icdn.dantri.com.vn/thumb_w/960/2019/08/30/giao-thong-ha-noi-1567142314122.jpg",
+    image: "https://www.kidsup.net/wp-content/uploads/2025/10/viet-nam-nhung-nam-80.jpg",
   },
   {
     position: "middle-right",
@@ -402,7 +402,7 @@ export function Part1CoSoLyLuan() {
                 <div className="rounded-3xl bg-amber-50 border-2 border-amber-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
                   <div className="h-56 md:h-72 overflow-hidden bg-gray-200">
                     <img 
-                      src="https://icdn.dantri.com.vn/thumb_w/960/2019/08/30/giao-thong-ha-noi-1567142314122.jpg"
+                      src="https://www.kidsup.net/wp-content/uploads/2025/10/viet-nam-nhung-nam-80.jpg"
                       alt="Đổi mới 1986"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
