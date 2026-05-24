@@ -50,7 +50,7 @@ export function Part2BoiCanh() {
         thiện mô hình XHCN Việt Nam.
       </p>
 
-      <h3 className="font-label-mono text-center text-golden-silk uppercase tracking-widest mb-6 text-lg md:text-xl font-semibold">
+      <h3 className="font-label-mono text-left text-golden-silk uppercase tracking-widest mb-6 text-lg md:text-xl font-semibold">
         Hạn chế hiện nay — Đại hội XIII
       </h3>
       <RevealStagger staggerMs={90} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8 items-stretch">

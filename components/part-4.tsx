@@ -9,7 +9,7 @@ export function Part4VanHoaXaHoi() {
   return (
     <SectionWrap id="part-4" className="!bg-white">
       {/* Header */}
-      <div className={`mb-16 text-center px-4 sm:px-8 ${fadeInVariants}`}>
+      <div className={`mb-16 text-left px-4 sm:px-8 ${fadeInVariants}`}>
         <p className="font-label-mono text-golden-silk uppercase tracking-widest text-lg font-bold mb-2">
           Phần 4
         </p>
@@ -196,7 +196,7 @@ export function Part4VanHoaXaHoi() {
 
       {/* Thành tựu chính */}
       <div className="px-4 sm:px-8 lg:px-20 mb-12">
-        <h3 className="font-display text-3xl md:text-4xl font-black text-on-surface mb-8 text-center">
+        <h3 className="font-display text-3xl md:text-4xl font-black text-on-surface mb-8 text-left">
           Thành Tựu Nổi Bật
         </h3>
         <div className="grid md:grid-cols-3 gap-6">
@@ -218,7 +218,7 @@ export function Part4VanHoaXaHoi() {
       </div>
 
       {/* Footer Banner */}
-      <div className="rounded-2xl border-3 border-revolutionary-red bg-gradient-to-r from-revolutionary-red to-golden-silk p-8 md:p-12 text-center mx-4 sm:mx-8 lg:mx-20 mb-4">
+      <div className="rounded-2xl border-3 border-revolutionary-red bg-gradient-to-r from-revolutionary-red to-golden-silk p-8 md:p-12 text-left mx-4 sm:mx-8 lg:mx-20 mb-4">
         <p className="font-display text-3xl md:text-5xl font-black text-white mb-3">
           PHÁT TRIỂN VÌ HẠNH PHÚC CON NGƯỜI
         </p>

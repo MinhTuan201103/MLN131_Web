@@ -8,7 +8,7 @@ export function Part6KetLuan() {
   return (
     <SectionWrap id="part-6" className="!bg-gradient-to-b from-white to-blue-50">
       {/* HEADER */}
-      <Reveal variant="fade-up" duration={800} className="mb-16 text-center px-4 sm:px-8">
+      <Reveal variant="fade-up" duration={800} className="mb-16 text-left px-4 sm:px-8">
         <p className="font-label-mono text-revolutionary-red uppercase tracking-widest text-lg font-bold mb-2">
           Phần 6
         </p>
@@ -107,13 +107,13 @@ export function Part6KetLuan() {
       {/* SECTION 2: TẦM NHÌN 2030-2045 */}
       <div className="mb-20 px-4 sm:px-8 lg:px-20">
         <Reveal variant="fade-up" duration={800} className="mb-12">
-          <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-center">
+          <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-left">
             Tầm Nhìn 2030 - 2045
           </h3>
-          <p className="font-label-mono text-golden-silk text-lg font-bold uppercase text-center">
+          <p className="font-label-mono text-golden-silk text-lg font-bold uppercase text-left">
             Kỷ Nguyên Vươn Mình
           </p>
-          <div className="w-12 h-1 bg-gradient-to-r from-golden-silk to-revolutionary-red mx-auto mt-4"></div>
+          <div className="w-12 h-1 bg-gradient-to-r from-golden-silk to-revolutionary-red mx-0 mt-4"></div>
         </Reveal>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -196,13 +196,13 @@ export function Part6KetLuan() {
       {/* SECTION 3: SINH VIÊN FPT VÀ TỔNG ĐỀ */}
       <div className="mb-20 px-4 sm:px-8 lg:px-20">
         <Reveal variant="fade-up" duration={800} className="mb-12">
-          <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-center">
+          <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-left">
             Liên Hệ Thực Tiễn
           </h3>
-          <p className="font-label-mono text-revolutionary-red text-lg font-bold uppercase text-center">
+          <p className="font-label-mono text-revolutionary-red text-lg font-bold uppercase text-left">
             Sinh Viên FPT & Tổ Chức Đoàn Phải Làm Gì?
           </p>
-          <div className="w-12 h-1 bg-gradient-to-r from-golden-silk to-revolutionary-red mx-auto mt-4"></div>
+          <div className="w-12 h-1 bg-gradient-to-r from-golden-silk to-revolutionary-red mx-0 mt-4"></div>
         </Reveal>
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">

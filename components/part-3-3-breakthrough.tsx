@@ -132,10 +132,10 @@ export function Part33Breakthrough() {
   return (
     <section className="bg-surface-container-low py-12 md:py-16 px-4">
       <div className="exhibition-container">
-        <h2 className="font-label-mono text-center text-golden-silk uppercase tracking-widest mb-2 text-lg md:text-xl font-semibold">
+        <h2 className="font-label-mono text-left text-golden-silk uppercase tracking-widest mb-2 text-lg md:text-xl font-semibold">
           3.3 · Bứt Phá Quy Mô
         </h2>
-        <h3 className="text-center font-display text-3xl md:text-4xl font-black text-on-surface mb-10">
+        <h3 className="text-left font-display text-3xl md:text-4xl font-black text-on-surface mb-10">
           Tăng Trưởng <span className="text-revolutionary-red">Nhanh & Bền Vững</span>
         </h3>
 

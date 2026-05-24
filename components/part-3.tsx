@@ -65,7 +65,7 @@ export function Part3KinhTe() {
         ]}
       />
 
-      <h3 className="font-label-mono text-golden-silk uppercase tracking-widest mb-6 text-center text-lg md:text-xl font-semibold">
+      <h3 className="font-label-mono text-golden-silk uppercase tracking-widest mb-6 text-left text-lg md:text-xl font-semibold">
         3.2 · Ba đột phá chiến lược
       </h3>
       <SlideCardGrid
@@ -87,14 +87,14 @@ export function Part3KinhTe() {
         items={[
           {
             card: (
-              <ContentCard badge="2030" title="100 năm Đảng">
+              <ContentCard badge="2030" title="100 năm thành lập Đảng">
                 <p>Đang phát triển · công nghiệp hiện đại · ~8.500 USD/người</p>
               </ContentCard>
             ),
           },
           {
             card: (
-              <ContentCard badge="2045" title="100 năm nước">
+              <ContentCard badge="2045" title="100 năm thành lập nước">
                 <p>
                   Phát triển thu nhập cao · hoàn thiện cơ sở vật chất chủ nghĩa xã hội
                 </p>

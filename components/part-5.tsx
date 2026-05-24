@@ -9,7 +9,7 @@ export function Part5QuocPhongChinhTri() {
   return (
     <SectionWrap id="part-5" className="!bg-white">
       {/* HERO */}
-      <Reveal variant="fade-up" duration={800} className="mb-16 text-center">
+      <Reveal variant="fade-up" duration={800} className="mb-16 text-left">
         <p className="font-label-mono text-golden-silk uppercase tracking-widest text-lg font-bold mb-3">
           Phần 5
         </p>
@@ -23,10 +23,10 @@ export function Part5QuocPhongChinhTri() {
 
       {/* KHỐI 1: CHÍNH TRỊ - 3 CARDS */}
       <Reveal variant="fade-up" duration={800} className="mb-16">
-        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-center">
+        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-left">
           CHÍNH TRỊ & HỆ THỐNG
         </h2>
-        <p className="text-center text-golden-silk font-bold text-lg mb-10 uppercase">
+        <p className="text-left text-golden-silk font-bold text-lg mb-10 uppercase">
           Nền tảng ổn định
         </p>
 
@@ -97,10 +97,10 @@ export function Part5QuocPhongChinhTri() {
 
       {/* KHỐI 2: ĐỐI NGOẠI & QUỐC PHÒNG - 2 COLUMNS */}
       <Reveal variant="fade-up" duration={800} className="mb-16">
-        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-center">
+        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-left">
           ĐỐI NGOẠI & QUỐC PHÒNG
         </h2>
-        <p className="text-center text-golden-silk font-bold text-lg mb-10 uppercase">
+        <p className="text-left text-golden-silk font-bold text-lg mb-10 uppercase">
           Bảo vệ từ sớm, từ xa
         </p>
 
@@ -185,7 +185,7 @@ export function Part5QuocPhongChinhTri() {
 
       {/* KHỐI 3: BẢNG SO SÁNH */}
       <Reveal variant="fade-up" duration={800} className="mb-16">
-        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-10 text-center">
+        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-10 text-left">
           TRƯỚC ĐỔI MỚI ↔ KỶ NGUYÊN VƯƠN MÌNH
         </h2>
 
@@ -234,10 +234,10 @@ export function Part5QuocPhongChinhTri() {
 
       {/* KHỐI 4: TIMELINE 2030-2045 */}
       <Reveal variant="fade-up" duration={800}>
-        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-center">
+        <h2 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-left">
           TẦM NHÌN CHIẾN LƯỢC
         </h2>
-        <p className="text-center text-golden-silk font-bold text-lg mb-10 uppercase">
+        <p className="text-left text-golden-silk font-bold text-lg mb-10 uppercase">
           2030 - 2045
         </p>
 
