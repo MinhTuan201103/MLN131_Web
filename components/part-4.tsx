@@ -1,33 +1,31 @@
 'use client'
 
-import { SectionWrap } from "@/components/content-card"
+import { SectionHeader, SectionWrap } from "@/components/content-card"
 import { Heart, Shield, TrendingDown, Crown, BookOpen, Users, BarChart3, Zap } from 'lucide-react'
 
 export function Part4VanHoaXaHoi() {
   const fadeInVariants = "animate-fade-in"
 
   return (
-    <SectionWrap id="part-4" className="!bg-white">
-      {/* Header */}
-      <div className={`mb-16 text-left px-4 sm:px-8 ${fadeInVariants}`}>
-        <p className="font-label-mono text-golden-silk uppercase tracking-widest text-lg font-bold mb-2">
-          Phần 4
-        </p>
-        <h2 className="font-display text-5xl md:text-6xl font-black text-on-surface mb-4">
-          VĂN HÓA — XÃ HỘI
-        </h2>
-        <div className="flex items-center justify-center gap-4 flex-wrap">
-          <span className="font-display text-2xl md:text-3xl font-bold text-on-surface">1986</span>
-          <span className="font-display text-3xl md:text-4xl text-revolutionary-red font-black">→</span>
-          <span className="font-display text-2xl md:text-3xl font-bold text-revolutionary-red">2026</span>
-        </div>
-        <p className="font-label-mono text-on-surface text-base md:text-lg mt-4 italic">
-          "Con người là trung tâm, chủ thể, nguồn lực quan trọng nhất của sự phát triển"
-        </p>
+    <SectionWrap id="part-4">
+      <SectionHeader
+        badge="Phần 4 · Văn hoá — Xã hội"
+        title={
+          <>
+            Con Người Là <span className="text-revolutionary-red">Trung Tâm</span>
+          </>
+        }
+        description='"Con người là trung tâm, chủ thể, nguồn lực quan trọng nhất của sự phát triển" — Đại hội XIII'
+      />
+
+      <div className={`mb-12 flex items-center gap-4 flex-wrap ${fadeInVariants}`}>
+        <span className="font-display text-2xl md:text-3xl font-bold text-on-surface">1986</span>
+        <span className="font-display text-3xl md:text-4xl text-revolutionary-red font-black">→</span>
+        <span className="font-display text-2xl md:text-3xl font-bold text-revolutionary-red">2026</span>
       </div>
 
       {/* Main Grid: 2 Columns */}
-      <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16 px-4 sm:px-8 lg:px-20">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
 
         {/* LEFT: VĂN HÓA */}
         <div className={`group ${fadeInVariants}`} style={{ animationDelay: '0.1s' }}>
@@ -195,7 +193,7 @@ export function Part4VanHoaXaHoi() {
       </div>
 
       {/* Thành tựu chính */}
-      <div className="px-4 sm:px-8 lg:px-20 mb-12">
+      <div className="mb-12">
         <h3 className="font-display text-3xl md:text-4xl font-black text-on-surface mb-8 text-left">
           Thành Tựu Nổi Bật
         </h3>
@@ -218,7 +216,7 @@ export function Part4VanHoaXaHoi() {
       </div>
 
       {/* Footer Banner */}
-      <div className="rounded-2xl border-3 border-revolutionary-red bg-gradient-to-r from-revolutionary-red to-golden-silk p-8 md:p-12 text-left mx-4 sm:mx-8 lg:mx-20 mb-4">
+      <div className="rounded-2xl border-3 border-revolutionary-red bg-gradient-to-r from-revolutionary-red to-golden-silk p-8 md:p-12 text-left mb-4">
         <p className="font-display text-3xl md:text-5xl font-black text-white mb-3">
           PHÁT TRIỂN VÌ HẠNH PHÚC CON NGƯỜI
         </p>

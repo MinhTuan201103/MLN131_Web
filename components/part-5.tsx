@@ -1,25 +1,21 @@
 'use client'
 
-import { SectionWrap } from "@/components/content-card"
+import { SectionHeader, SectionWrap } from "@/components/content-card"
 import { Reveal, RevealStagger } from "@/components/reveal"
 import { NumberCounter } from "@/components/number-counter"
 import { Users, Globe, Shield, Zap, Lock } from 'lucide-react'
 
 export function Part5QuocPhongChinhTri() {
   return (
-    <SectionWrap id="part-5" className="!bg-white">
-      {/* HERO */}
-      <Reveal variant="fade-up" duration={800} className="mb-16 text-left">
-        <p className="font-label-mono text-golden-silk uppercase tracking-widest text-lg font-bold mb-3">
-          Phần 5
-        </p>
-        <h1 className="font-display text-5xl md:text-7xl font-black text-on-surface mb-4 animate-in fade-in zoom-in duration-700">
-          QUỐC PHÒNG & CHÍNH TRỊ
-        </h1>
-        <p className="font-display text-3xl md:text-4xl text-revolutionary-red font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-          Ổn Định Cho Kỷ Nguyên Vươn Mình
-        </p>
-      </Reveal>
+    <SectionWrap id="part-5" variant="low">
+      <SectionHeader
+        badge="Phần 5 · Quốc phòng & Chính trị"
+        title={
+          <>
+            Ổn Định Cho <span className="text-revolutionary-red">Kỷ Nguyên Vươn Mình</span>
+          </>
+        }
+      />
 
       {/* KHỐI 1: CHÍNH TRỊ - 3 CARDS */}
       <Reveal variant="fade-up" duration={800} className="mb-16">

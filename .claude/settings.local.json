@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"\\(Get-Content components/part-6.tsx\\) -replace 'px-4 sm:px-8 lg:px-20', '' -replace '  +', ' ' | Set-Content components/part-6.tsx -Encoding utf8\")",
+      "Bash(git checkout *)",
+      "Bash(npx tsc *)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "PowerShell(npx --no-install tsc --noEmit 2>&1)",
+      "Bash(grep -c '<__TRACKED_VAR__' components/part-1.tsx)",
+      "Bash(grep -c '</__TRACKED_VAR__>' components/part-1.tsx)"
+    ]
+  }
+}

@@ -1,27 +1,23 @@
 'use client'
 
-import { SectionWrap } from "@/components/content-card"
+import { SectionHeader, SectionWrap } from "@/components/content-card"
 import { Reveal } from "@/components/reveal"
 import { Lightbulb, Users, Zap, Cog, Globe, Target, GraduationCap, BookOpen, Flame } from 'lucide-react'
 
 export function Part6KetLuan() {
   return (
-    <SectionWrap id="part-6" className="!bg-gradient-to-b from-white to-blue-50">
-      {/* HEADER */}
-      <Reveal variant="fade-up" duration={800} className="mb-16 text-left px-4 sm:px-8">
-        <p className="font-label-mono text-revolutionary-red uppercase tracking-widest text-lg font-bold mb-2">
-          Phần 6
-        </p>
-        <h2 className="font-display text-5xl md:text-6xl font-black text-on-surface mb-4">
-          KẾT LUẬN
-        </h2>
-        <p className="font-display text-2xl md:text-3xl text-golden-silk font-bold">
-          40 Năm Đổi Mới — Kỷ Nguyên Vươn Mình
-        </p>
-      </Reveal>
+    <SectionWrap id="part-6">
+      <SectionHeader
+        badge="Phần 6 · Kết luận"
+        title={
+          <>
+            40 Năm Đổi Mới — <span className="text-revolutionary-red">Kỷ Nguyên Vươn Mình</span>
+          </>
+        }
+      />
 
       {/* SECTION 1: 5 BÀI HỌC */}
-      <Reveal variant="fade-up" duration={800} className="mb-20 px-4 sm:px-8 lg:px-20">
+      <Reveal variant="fade-up" duration={800} className="mb-20">
         <div className="mb-12">
           <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2">
             5 Bài Học Kinh Nghiệm
@@ -105,7 +101,7 @@ export function Part6KetLuan() {
       </Reveal>
 
       {/* SECTION 2: TẦM NHÌN 2030-2045 */}
-      <div className="mb-20 px-4 sm:px-8 lg:px-20">
+      <div className="mb-20">
         <Reveal variant="fade-up" duration={800} className="mb-12">
           <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-left">
             Tầm Nhìn 2030 - 2045
@@ -194,7 +190,7 @@ export function Part6KetLuan() {
       </div>
 
       {/* SECTION 3: SINH VIÊN FPT VÀ TỔNG ĐỀ */}
-      <div className="mb-20 px-4 sm:px-8 lg:px-20">
+      <div className="mb-20">
         <Reveal variant="fade-up" duration={800} className="mb-12">
           <h3 className="font-display text-4xl md:text-5xl font-black text-on-surface mb-2 text-left">
             Liên Hệ Thực Tiễn
@@ -274,7 +270,7 @@ export function Part6KetLuan() {
       </div>
 
       {/* KẾT LUẬN CHUNG */}
-      <Reveal variant="fade-up" duration={800} className="mb-8 px-4 sm:px-8 lg:px-20">
+      <Reveal variant="fade-up" duration={800} className="mb-8">
         <div className="rounded-3xl border-3 border-revolutionary-red bg-gradient-to-br from-red-50 to-pink-50 p-8 md:p-12">
           <div className="flex items-start gap-4 mb-6">
             <Flame className="w-8 h-8 text-revolutionary-red flex-shrink-0 mt-1" />

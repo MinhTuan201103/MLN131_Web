@@ -1,17 +1,18 @@
 import {
   SectionHeader,
   SectionWrap,
+  SourceLink,
 } from "@/components/content-card"
 import { MediaBlock } from "@/components/media-block"
 import { Reveal, RevealStagger } from "@/components/reveal"
 import { ArrowRight } from "lucide-react"
 
 const TRAITS_1991 = [
-  "Nhân dân lao động làm chủ",
-  "Có nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về các tư liệu sản xuất chủ yếu",
-  "Có nền văn hóa tiên tiến, đậm đà bản sắc dân tộc",
-  "Con người được giải phóng khỏi áp bức, bóc lột, bất công; có cuộc sống ấm no, tự do, hạnh phúc, có điều kiện phát triển toàn diện",
-  "Các dân tộc trong nước bình đẳng, đoàn kết và giúp đỡ nhau cùng tiến bộ",
+  "Do nhân dân lao động làm chủ",
+  "Có một nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về các tư liệu sản xuất chủ yếu",
+  "Có nền văn hoá tiên tiến, đậm đà bản sắc dân tộc",
+  "Con người được giải phóng khỏi áp bức, bóc lột, bất công; làm theo năng lực, hưởng theo lao động; có cuộc sống ấm no, tự do, hạnh phúc; có điều kiện phát triển toàn diện cá nhân",
+  "Các dân tộc trong nước bình đẳng, đoàn kết và giúp đỡ lẫn nhau cùng tiến bộ",
   "Có quan hệ hữu nghị và hợp tác với nhân dân tất cả các nước trên thế giới",
 ]
 
@@ -23,39 +24,57 @@ const TRAITS_2011 = [
   },
   {
     number: "02",
-    text: "Nhân dân làm chủ",
+    text: "Do nhân dân làm chủ",
     kind: "aligned",
   },
   {
     number: "03",
-    text: "Kinh tế phát triển cao — lực lượng sản xuất hiện đại",
+    text: "Có nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và quan hệ sản xuất tiến bộ phù hợp",
     kind: "aligned",
   },
   {
     number: "04",
-    text: "Văn hóa tiên tiến, đậm đà bản sắc dân tộc",
+    text: "Có nền văn hoá tiên tiến, đậm đà bản sắc dân tộc",
     kind: "aligned",
   },
   {
     number: "05",
-    text: "Con người ấm no, tự do, hạnh phúc",
+    text: "Con người có cuộc sống ấm no, tự do, hạnh phúc, có điều kiện phát triển toàn diện",
     kind: "aligned",
   },
   {
     number: "06",
-    text: "Dân tộc bình đẳng, đoàn kết",
+    text: "Các dân tộc trong cộng đồng Việt Nam bình đẳng, đoàn kết, tôn trọng và giúp nhau cùng phát triển",
     kind: "aligned",
   },
   {
     number: "07",
-    text: "Nhà nước pháp quyền xã hội chủ nghĩa của nhân dân, do nhân dân, vì nhân dân, do Đảng Cộng sản lãnh đạo",
+    text: "Có Nhà nước pháp quyền xã hội chủ nghĩa của nhân dân, do nhân dân, vì nhân dân do Đảng Cộng sản lãnh đạo",
     kind: "added",
   },
   {
     number: "08",
-    text: "Hữu nghị, hợp tác quốc tế",
+    text: "Có quan hệ hữu nghị và hợp tác với các nước trên thế giới",
     kind: "aligned",
   },
+]
+
+const EVIDENCE_DAN_GIAU = [
+  { value: "510", unit: "tỷ USD", label: "GDP 2025 · #32 thế giới, #4 ASEAN" },
+  { value: "5.026", unit: "USD", label: "GDP/người 2025 · ~114 triệu đồng" },
+  { value: "0,766", unit: "điểm", label: "HDI 2025 · tăng 14 bậc, nhóm cao" },
+  { value: "1,3%", unit: "", label: "Hộ nghèo đa chiều 2025 (từ 4,2% năm 2022)" },
+  { value: "95,2%", unit: "", label: "Bao phủ BHYT 2025 (từ 90,9% năm 2020)" },
+  { value: "46/143", unit: "", label: "Chỉ số hạnh phúc · tăng 48 bậc so 2016" },
+]
+
+const EVIDENCE_NHA_NUOC = [
+  { value: "−46%", unit: "", label: "Đơn vị hành chính cấp tỉnh (2025)" },
+  { value: "−66,9%", unit: "", label: "Đơn vị hành chính cấp xã (2025)" },
+  { value: "Bỏ", unit: "1 cấp", label: "Cấp huyện · lần đầu kể từ 1945" },
+  { value: "−34,9%", unit: "", label: "Đầu mối trực thuộc Trung ương" },
+  { value: "99 → 71", unit: "", label: "Chính phủ điện tử (LHQ) 2014 → 2024" },
+  { value: "0", unit: "vùng cấm", label: 'Phòng chống tham nhũng "không ngoại lệ"' },
 ]
 
 const SOCIALISM_DEFINITION = (
@@ -293,6 +312,109 @@ export function Part1CoSoLyLuan() {
                 })}
               </RevealStagger>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* === Cơ sở thực tiễn cho 2 đặc trưng bổ sung 2011 === */}
+      <div className="comparison-evidence mb-14">
+        <div className="mb-8">
+          <span className="font-label-mono text-revolutionary-red uppercase tracking-widest text-sm md:text-base font-semibold">
+            Cơ sở thực tiễn cho 2 đặc trưng được bổ sung năm 2011
+          </span>
+          <h3 className="font-display text-3xl md:text-4xl text-on-surface mt-2 leading-tight">
+            Thành tựu 40 năm Đổi mới minh chứng cho mô hình bổ sung
+          </h3>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          {/* Card 01 — Dân giàu, nước mạnh */}
+          <Reveal variant="fade-up">
+            <article className="evidence-card evidence-card-red h-full">
+              <header className="evidence-card-header">
+                <span className="evidence-card-number">01</span>
+                <div>
+                  <p className="evidence-card-kicker text-revolutionary-red">
+                    Đặc trưng bổ sung · Mục tiêu tổng quát
+                  </p>
+                  <h4 className="evidence-card-title">
+                    Dân giàu, nước mạnh, dân chủ, công bằng, văn minh
+                  </h4>
+                </div>
+              </header>
+
+              <div className="evidence-stat-grid">
+                {EVIDENCE_DAN_GIAU.map((s, i) => (
+                  <div key={i} className="evidence-stat evidence-stat-red">
+                    <p className="evidence-stat-value">
+                      {s.value}
+                      {s.unit && <span className="evidence-stat-unit"> {s.unit}</span>}
+                    </p>
+                    <p className="evidence-stat-label">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <blockquote className="evidence-quote">
+                &ldquo;Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay.&rdquo;
+                <cite>— Văn kiện Đại hội XIV, Tập 2, tr.105</cite>
+              </blockquote>
+            </article>
+          </Reveal>
+
+          {/* Card 07 — Nhà nước pháp quyền XHCN */}
+          <Reveal variant="fade-up" delay={120}>
+            <article className="evidence-card evidence-card-gold h-full">
+              <header className="evidence-card-header">
+                <span className="evidence-card-number evidence-card-number-gold">07</span>
+                <div>
+                  <p className="evidence-card-kicker text-golden-silk">
+                    Đặc trưng bổ sung · Thể chế lãnh đạo
+                  </p>
+                  <h4 className="evidence-card-title">
+                    Nhà nước pháp quyền XHCN của nhân dân, do nhân dân, vì nhân dân
+                  </h4>
+                </div>
+              </header>
+
+              <div className="evidence-stat-grid">
+                {EVIDENCE_NHA_NUOC.map((s, i) => (
+                  <div key={i} className="evidence-stat evidence-stat-gold">
+                    <p className="evidence-stat-value">
+                      {s.value}
+                      {s.unit && <span className="evidence-stat-unit"> {s.unit}</span>}
+                    </p>
+                    <p className="evidence-stat-label">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <blockquote className="evidence-quote evidence-quote-gold">
+                &ldquo;Cuộc cách mạng sắp xếp tổ chức bộ máy&rdquo; nhiệm kỳ 2021–2025 — phòng chống tham nhũng &ldquo;không có vùng cấm, không có ngoại lệ&rdquo;.
+                <cite>— VK ĐH XIV, T.2 tr.99–101; BCCT tr.58, 61–62</cite>
+              </blockquote>
+            </article>
+          </Reveal>
+        </div>
+
+        {/* Nguồn tham khảo */}
+        <div className="mt-6 rounded-2xl border border-monument-grey bg-surface-container px-5 py-4 shadow-sm">
+          <p className="mb-3 font-label-mono text-sm uppercase tracking-[0.24em] text-revolutionary-red">
+            Nguồn tham khảo
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <span className="font-label-mono text-sm font-semibold text-on-surface uppercase tracking-wider">
+              Giáo trình MLN131, tr.113–114
+            </span>
+            <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-vii/cuong-linh-xay-dung-dat-nuoc-trong-thoi-ky-qua-do-len-chu-nghia-xa-hoi-1493">
+              Cương lĩnh 1991
+            </SourceLink>
+            <SourceLink href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-xi/cuong-linh-xay-dung-dat-nuoc-trong-thoi-ky-qua-do-len-chu-nghia-xa-hoi-bo-sung-phat-trien-nam-2011-1528">
+              Cương lĩnh bổ sung 2011
+            </SourceLink>
+            <span className="font-label-mono text-sm font-semibold text-on-surface uppercase tracking-wider">
+              Văn kiện ĐH XIV, Tập 1 & 2
+            </span>
           </div>
         </div>
       </div>
